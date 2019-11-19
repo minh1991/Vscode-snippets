@@ -1,178 +1,306 @@
 {
-  "consoleLog": {
-    "prefix": "clg",
-    "body": ["console.log('$1');"],
-    "description": "console.log"
-  },
-  "fileInfo": {
-    "prefix": "info",
-    "body": [
-      "<!-----------------------------------------------------------------------------",
-      "   Program Name        :        $1",
-      "   Author              :        $2",
-      "   Input               :        $3",
-      "   Output              :        $4",
-      "   Return              :        $5",
-      "   Function            :        $6",
-      "   Update              :        $7  $8  $9",
-      "------------------------------------------------------------------------------>"
-    ],
-    "description": "Program Name, Author"
-  },
-  "htmlCreate": {
-    "prefix": "ht-!",
-    "body": [
-      "<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN'>",
-      "<HTML>",
-      "     <HEAD>",
-      "          <META http-equiv='Content-Type' content='text/html; charset=Shift_JIS'>",
-      "          <TITLE>$1</TITLE>",
-      "          <SCRIPT type='text/javascript'>",
-      "          </SCRIPT>",
-      "          <STYLE TYPE='text/css'>",
-      "          </STYLE>",
-      "     </HEAD>",
-      "     <BODY>",
-      "     </BODY>",
-      "</HTML>"
-    ],
-    "description": "HTML"
-  },
-  "html-H1": {
-    "prefix": "ht-H1",
-    "body": ["<H1>$1</H1>"],
-    "description": "HTML.H1"
-  },
-  "html-H2": {
-    "prefix": "ht-H2",
-    "body": ["<H2>$1</H2>"],
-    "description": "HTML.H2"
-  },
-  "html-H3": {
-    "prefix": "ht-H3",
-    "body": ["<H3>$1</H3>"],
-    "description": "HTML.H3"
-  },
-  "html-H4": {
-    "prefix": "ht-H4",
-    "body": ["<H4>$1</H4>"],
-    "description": "HTML.H4"
-  },
-  "html-H5": {
-    "prefix": "ht-H5",
-    "body": ["<H5>$1</H5>"],
-    "description": "HTML.H5"
-  },
-  "html-H6": {
-    "prefix": "ht-H6",
-    "body": ["<H6>$1</H6>"],
-    "description": "HTML.H6"
-  },
-  "html-p": {
-    "prefix": "ht-P",
-    "body": ["<P>$1</P>"],
-    "description": "HTML.P"
-  },
-  "html-BR": {
-    "prefix": "ht-BR",
-    "body": ["</BR>"],
-    "description": "HTML.BR"
-  },
-  "html-SMALL": {
-    "prefix": "ht-SMALL",
-    "body": ["<SMALL>$1</SMALL>"],
-    "description": "HTML.SMALL"
-  },
-  "html-STRONG": {
-    "prefix": "ht-SRONG",
-    "body": ["<STRONG>$1</STRONG>"],
-    "description": "HTML.STRONG"
-  },
-  "html-FRAMESET": {
-    "prefix": "ht-FRAMESET",
-    "body": [
-      "<FRAMESET cols= '$1, $2, $3'>",
-      "    <FRAME src= '$4'>",
-      "    <FRAME src= '$5'>",
-      "    <FRAME src= '$6'>",
-      "</FRAMESET>"
-    ],
-    "description": "HTML.FRAMESET"
-  },
-  "html-FRAME": {
-    "prefix": "ht-FRAME",
-    "body": ["<FRAME src= '$1'>"],
-    "description": "HTML.FRAME"
-  },
-  "html-IFRAME": {
-    "prefix": "ht-IFRAME",
-    "body": ["<IFRAME src= '$1'></IFRAME>"],
-    "description": "HTML.IFRAME"
-  },
-  "html-NOFRAME": {
-    "prefix": "ht-NOFRAME",
-    "body": ["<NOFRAME>$1</NOFRAME>"],
-    "description": "HTML.NOFRAME"
-  },
-  "html-IMG": {
-    "prefix": "ht-IMG",
-    "body": ["<IMG src='$1' alt='$2' height='$3' width='$4'>"],
-    "description": "HTML.IMG"
-  },
-  "html-A": {
-    "prefix": "ht-A",
-    "body": ["<A href='$1'>$2</A>"],
-    "description": "HTML.A"
-  },
-  "htmlDiv": {
-    "prefix": "ht-div",
-    "body": ["<DIV>$1</DIV>"],
-    "description": "HTML.div"
-  },
+	"fileInfo": {
+	  "prefix": "info",
+	  "body": [
+		"<!-----------------------------------------------------------------------------",
+		"   Program Name        :        $1",
+		"   Author              :        $2",
+		"   Input               :        $3",
+		"   Output              :        $4",
+		"   Return              :        $5",
+		"   Function            :        $6",
+		"   Update              :        $7  $8  $9",
+		"------------------------------------------------------------------------------>"
+	  ],
+	  "description": "Program Name, Author"
+	},
+	"htmlCreate": {
+	  "prefix": "ht-!",
+	  "body": [
+		"<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN'>",
+		"<HTML>",
+		"     <HEAD>",
+		"          <META http-equiv='Content-Type' content='text/html; charset=Shift_JIS'>",
+		"          <TITLE>$1</TITLE>",
+		"          <SCRIPT type='text/javascript'>",
+		"          </SCRIPT>",
+		"          <STYLE TYPE='text/css'>",
+		"          </STYLE>",
+		"     </HEAD>",
+		"     <BODY>",
+		"     </BODY>",
+		"</HTML>"
+	  ],
+	  "description": "HTML"
+	},
+  
+	"htmlScript": {
+	  "prefix": "ht-script",
+	  "body": [
+		"<SCRIPT>$1</SCRIPT>"
+	  ],
+	  "description": "HTML.script"
+	},
+  
+  
+  
+  
+  
+  
+	"html-H1": {
+	  "prefix": "ht-H1",
+	  "body": ["<H1>$1</H1>"],
+	  "description": "HTML.H1"
+	},
+	"html-H2": {
+	  "prefix": "ht-H2",
+	  "body": ["<H2>$1</H2>"],
+	  "description": "HTML.H2"
+	},
+	"html-H3": {
+	  "prefix": "ht-H3",
+	  "body": ["<H3>$1</H3>"],
+	  "description": "HTML.H3"
+	},
+	"html-H4": {
+	  "prefix": "ht-H4",
+	  "body": ["<H4>$1</H4>"],
+	  "description": "HTML.H4"
+	},
+	"html-H5": {
+	  "prefix": "ht-H5",
+	  "body": ["<H5>$1</H5>"],
+	  "description": "HTML.H5"
+	},
+	"html-H6": {
+	  "prefix": "ht-H6",
+	  "body": ["<H6>$1</H6>"],
+	  "description": "HTML.H6"
+	},
+	"html-p": {
+	  "prefix": "ht-P",
+	  "body": ["<P>$1</P>"],
+	  "description": "HTML.P"
+	},
+	"html-BR": {
+	  "prefix": "ht-BR",
+	  "body": ["</BR>"],
+	  "description": "HTML.BR"
+	},
+	"html-SMALL": {
+	  "prefix": "ht-SMALL",
+	  "body": ["<SMALL>$1</SMALL>"],
+	  "description": "HTML.SMALL"
+	},
+	"html-STRONG": {
+	  "prefix": "ht-SRONG",
+	  "body": ["<STRONG>$1</STRONG>"],
+	  "description": "HTML.STRONG"
+	},
+	"html-FRAMESET": {
+	  "prefix": "ht-FRAMESET",
+	  "body": [
+		"<FRAMESET cols= '$1, $2, $3'>",
+		"    <FRAME src= '$4'>",
+		"    <FRAME src= '$5'>",
+		"    <FRAME src= '$6'>",
+		"</FRAMESET>"
+	  ],
+	  "description": "HTML.FRAMESET"
+	},
+	"html-FRAME": {
+	  "prefix": "ht-FRAME",
+	  "body": ["<FRAME src= '$1'>"],
+	  "description": "HTML.FRAME"
+	},
+	"html-IFRAME": {
+	  "prefix": "ht-IFRAME",
+	  "body": ["<IFRAME src= '$1'></IFRAME>"],
+	  "description": "HTML.IFRAME"
+	},
+	"html-NOFRAME": {
+	  "prefix": "ht-NOFRAME",
+	  "body": ["<NOFRAME>$1</NOFRAME>"],
+	  "description": "HTML.NOFRAME"
+	},
+	"html-IMG": {
+	  "prefix": "ht-IMG",
+	  "body": ["<IMG src='$1' alt='$2' height='$3' width='$4'>"],
+	  "description": "HTML.IMG"
+	},
+	"html-A": {
+	  "prefix": "ht-A",
+	  "body": ["<A href='$1'>$2</A>"],
+	  "description": "HTML.A"
+	},
+	"htmlDiv": {
+	  "prefix": "ht-div",
+	  "body": ["<DIV>$1</DIV>"],
+	  "description": "HTML.div"
+	},
+  
+	"htmlUl": {
+	  "prefix": "ht-ul",
+	  "body": [
+		"<UL>",
+		"   <LI>$1</LI>",
+		"   <LI>$2</LI>",
+		"   <LI>$3</LI>",
+		"</UL>"
+	  ],
+	  "description": "HTML.Ul"
+	},
+  
+	"htmlLi": {
+	  "prefix": "ht-li",
+	  "body": [
+		"<LI>$1</LI>"
+	  ],
+	  "description": "HTML.Li"
+	},
+  
+	"htmlTable-All": {
+	  "prefix": "ht-tbl-all",
+	  "body": [
+		"<TABLE>",
+		"   <TR>",
+		"       <TH>$1</TH>",
+		"       <TH>$2</TH>",
+		"       <TH>$3</TH>",
+		"       <TH>$4</TH>",
+		"   </TR>",
+  
+		"   <TR>",
+		"       <TD>$5</TD>",
+		"       <TD>$6</TD>",
+		"       <TD>$7</TD>",
+		"       <TD>$8</TD>",
+		"   </TR>",
+		"</TABLE>"
+	  ],
+	  "description": "HTML.Table"
+	},
+  
+	"htmlTr": {
+	  "prefix": "ht-tr",
+	  "body": [
+		"<TR>$1</TR>"
+	  ],
+	  "description": "HTML.Tr"
+	},
+	"htmlTh": {
+	  "prefix": "ht-th",
+	  "body": [
+		"<TH>$1</TH>"
+	  ],
+	  "description": "HTML.Th"
+	},
+	"htmlTd": {
+	  "prefix": "ht-td",
+	  "body": [
+		"<TD>$1</TD>"
+	  ],
+	  "description": "HTML.Td"
+	},
+	"htmlTable": {
+	  "prefix": "ht-tbl",
+	  "body": [
+		"<TABLE>$1</TABLE>"
+	  ],
+	  "description": "HTML.tbl"
+	},
+  
+	"htmlThead": {
+	  "prefix": "ht-thead",
+	  "body": [
+		"<THEAD>$1</THEAD>"
+	  ],
+	  "description": "HTML.thead"
+	},
+	"htmlTbody": {
+	  "prefix": "ht-tbody",
+	  "body": [
+		"<TBODY>$1</TBODY>"
+	  ],
+	  "description": "HTML.tbody"
+	},
+	"htmlTfoot": {
+	  "prefix": "ht-tfoot",
+	  "body": [
+		"<TFOOT>$1</TFOOT>"
+	  ],
+	  "description": "HTML.tfoot"
+	},
+  
+  
+  
+	"htmlSpan": {
+	  "prefix": "ht-span",
+	  "body": [
+		"<SPAN>$1</SPAN>"
+	  ],
+	  "description": "HTML.span"
+	},
+  
+	// COLDFUSION
+  
+	"cfmComment": {
+	  "prefix": "cf-comment",
+	  "body": [
+		"<!---  $1  --->"
+	  ],
+	  "description": "COLDFUSION.comment"
+	},
+	// JAVASCRIPT
+  
+	"jsConsoleLog": {
+	  "prefix": "js-clg",
+	  "body": ["console.log('$1');"],
+	  "description": "JAVASCRIPT.consoleLog"
+	},
+  
+	"jsFunction": {
+	  "prefix": "js-function",
+	  "body": [
+		"function $1($2) {",
+		"     $3",
+		"};"
+	  ],
+	  "description": "JAVASCRIPT.function"
+	},
 
-  "htmlUl": {
-    "prefix": "ht-ul",
-    "body": [
-      "<UL>",
-      "   <LI>$1</LI>",
-      "   <LI>$2</LI>",
-      "   <LI>$3</LI>",
-      "</UL>"
-    ],
-    "description": "HTML.Ul"
-  },
+	"jsVar": {
+		"prefix": "js-var",
+		"body": [
+		  "var $1 = $2;",
+		],
+		"description": "JAVASCRIPT.var"
+	  },
 
-  "htmlLi": {
-    "prefix": "ht-li",
-    "body": [
-      "<LI>$1</LI>"
-    ],
-    "description": "HTML.Li"
-  },
+	"jsVar-arr": {
+		"prefix": "js-var-arr",
+		"body": [
+		  "var $1 = [$2];",
+		],
+		"description": "JAVASCRIPT.varArr"
+	  },
 
-  "htmlTable": {
-    "prefix": "ht-tbl",
-    "body": [
-      "<TABLE>",
-      "   <TR>",
-      "       <TH>$1</TH>",
-      "       <TH>$2</TH>",
-      "       <TH>$3</TH>",
-      "       <TH>$4</TH>",
-      "   </TR>",
+	"jsVar-obj": {
+		"prefix": "js-var-obj",
+		"body": [
+		  "var $1 = {$2};",
+		],
+		"description": "JAVASCRIPT.varObj"
+	  },
+	
 
-      "   <TR>",
-      "       <TD>$5</TD>",
-      "       <TD>$6</TD>",
-      "       <TD>$7</TD>",
-      "       <TD>$8</TD>",
-      "   </TR>",
-      "</TABLE>"
-    ],
-    "description": "HTML.Table"
-  },
+	"jsDocument-byID": {
+		"prefix": "js-documentGetElementById",
+		"body": [
+		  "document.getElementById($1)$2 = $3;",
+		],
+		"description": "JAVASCRIPT.documentGetElementById"
+	  },
 
-
-
-
-}
+  }
+  
