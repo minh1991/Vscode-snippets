@@ -375,6 +375,48 @@
         ],
         "description": "JAVASCRIPT.loopFor"
 	 },
+	 "js-parseInt": {
+        "prefix": "js-parseInt",
+        "body": [
+          "parseInt($1)"
+        ],
+        "description": "JAVASCRIPT.parseInt"
+	 },
+	 "js-parseFloat": {
+        "prefix": "js-parseFloat",
+        "body": [
+          "parseFloat($1)"
+        ],
+        "description": "JAVASCRIPT.parseFloat"
+	 },
+	 "js-Number": {
+        "prefix": "js-Number",
+        "body": [
+          "Number($1)"
+        ],
+        "description": "JAVASCRIPT.Number"
+	 },
+	 "js-String": {
+        "prefix": "js-String",
+        "body": [
+          "String($1)"
+        ],
+        "description": "JAVASCRIPT.String"
+	 },
+	 "js-eval": {
+        "prefix": "js-eval",
+        "body": [
+          "eval($1)"
+        ],
+        "description": "JAVASCRIPT.eval"
+	 },
+	 "js-typeof": {
+        "prefix": "js-typeof",
+        "body": [
+          "typeof $1"
+        ],
+        "description": "JAVASCRIPT.typeof"
+	 },
 
 
 
