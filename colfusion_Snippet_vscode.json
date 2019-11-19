@@ -100,22 +100,22 @@
 	"html-FRAMESET": {
 	  "prefix": "ht-FRAMESET",
 	  "body": [
-		"<FRAMESET cols= '$1, $2, $3'>",
-		"    <FRAME src= '$4'>",
-		"    <FRAME src= '$5'>",
-		"    <FRAME src= '$6'>",
+		"<FRAMESET cols= ${1:cols}>",
+		"    <FRAME src= ${2:src}>",
+		"    <FRAME src= ${3:src}>",
+		"    <FRAME src= ${4:src}>",
 		"</FRAMESET>"
 	  ],
 	  "description": "HTML.FRAMESET"
 	},
 	"html-FRAME": {
 	  "prefix": "ht-FRAME",
-	  "body": ["<FRAME src= '$1'>"],
+	  "body": ["<FRAME src= ${1:src}>"],
 	  "description": "HTML.FRAME"
 	},
 	"html-IFRAME": {
 	  "prefix": "ht-IFRAME",
-	  "body": ["<IFRAME src= '$1'></IFRAME>"],
+	  "body": ["<IFRAME src= ${1:src}></IFRAME>"],
 	  "description": "HTML.IFRAME"
 	},
 	"html-NOFRAME": {
@@ -125,12 +125,12 @@
 	},
 	"html-IMG": {
 	  "prefix": "ht-IMG",
-	  "body": ["<IMG src='$1' alt='$2' height='$3' width='$4'>"],
+	  "body": ["<IMG src= ${1:src} alt= ${2:alt} height= ${3:alt} width= ${4:width}>"],
 	  "description": "HTML.IMG"
 	},
 	"html-A": {
 	  "prefix": "ht-A",
-	  "body": ["<A href='$1'>$2</A>"],
+	  "body": ["<A href= ${1:href}>$2</A>"],
 	  "description": "HTML.A"
 	},
 	"htmlDiv": {
@@ -180,6 +180,33 @@
 	  ],
 	  "description": "HTML.Table"
 	},
+
+	"htmlColspan": {
+		"prefix": "ht-colspan",
+		"body": [
+		  "colspan=${1:colspan}"
+		],
+		"description": "HTML.colspan"
+	  },
+	  "htmlRowspan": {
+		"prefix": "ht-rowspan",
+		"body": [
+		  "rowspan=${1:rowspan}"
+		],
+		"description": "HTML.rowspan"
+	  },
+
+	  "htmlColgroup": {
+		"prefix": "ht-colgroup",
+		"body": [
+		  "<COLGROUP>",
+		  "   <COL span=${1:span} width=${2:width}>",
+		  "   <COL span=${3:span} width=${4:width}>",
+		  "   <COL span=${5:span} width=${6:width}>",
+		  "</COLGROUP>"
+		],
+		"description": "HTML.colgroup"
+	  },
   
 	"htmlTr": {
 	  "prefix": "ht-tr",
@@ -232,8 +259,6 @@
 	  "description": "HTML.tfoot"
 	},
   
-  
-  
 	"htmlSpan": {
 	  "prefix": "ht-span",
 	  "body": [
@@ -241,7 +266,44 @@
 	  ],
 	  "description": "HTML.span"
 	},
-  
+	"htmlForm": {
+		"prefix": "ht-form",
+		"body": [
+		  "<FORM name=${1:name} id=${2:id} method=${3:method}>",
+		  "   $3",
+		  "</FORM>",
+		],
+		"description": "HTML.form"
+	  },
+
+	  "htmlInput": {
+		"prefix": "ht-input",
+		"body": [
+		  "<INPUT type=${1:type} name=${2:name} id=${3:id} value=${4:value} maxlength=${5:maxlength} class=${6:class} ${7:readonly} ${8:disabled}>"
+		],
+		"description": "HTML.span"
+	  },
+	  "htmlSelect-option": {
+		"prefix": "ht-select-option",
+		"body": [
+		  "<SELECT id=${1:id} name=${2:name} >",
+		  "   <OPTION value=${3:value}>$4</OPTION>",
+		  "   <OPTION value=${5:value}>$6</OPTION>",
+		  "   <OPTION value=${7:value}>$8</OPTION>",
+		  "</SELECT>"
+		],
+		"description": "HTML.select-option"
+	  },
+	  "htmlOption": {
+		"prefix": "ht-option",
+		"body": [
+		  "<OPTION value=${1:value}>$2</OPTION>",
+		],
+		"description": "HTML.option"
+	  },
+
+
+
 // COLDFUSION
   
 	"cfmComment": {
@@ -251,6 +313,10 @@
 	  ],
 	  "description": "COLDFUSION.comment"
 	},
+
+
+
+
 // JAVASCRIPT
   
 	// COMMON
@@ -273,10 +339,78 @@
 	  "body": [
 		"function $1 ($2) {",
 		"     $3",
+		"   return $4;",
 		"};"
 	  ],
 	  "description": "JAVASCRIPT.function"
 	},
+	"js-length": {
+        "prefix": "js-length",
+        "body": [
+          ".length",
+        ],
+        "description": "JAVASCRIPT.length"
+	 },
+	 "js-concat": {
+        "prefix": "js-concat",
+        "body": [
+          ".concat($1)",
+        ],
+        "description": "JAVASCRIPT.concat"
+	 },
+	 "js-toString": {
+        "prefix": "js-toString",
+        "body": [
+          ".toString()",
+        ],
+        "description": "JAVASCRIPT.toString"
+	 },
+
+	// ACTION EVENTS
+	"jsOnclick": {
+		"prefix": "js-onclick",
+		"body": [
+			"onClick=$1"
+		],
+		"description": "JAVASCRIPT.onclick"
+	  },
+	  "jsOnchange": {
+		"prefix": "js-onchange",
+		"body": [
+			"onChange=$1"
+		],
+		"description": "JAVASCRIPT.onchange"
+	  },
+	  "jsOnload": {
+		"prefix": "js-onload",
+		"body": [
+			"onLoad=$1"
+		],
+		"description": "JAVASCRIPT.onload"
+	  },
+	  "jsOnkeypress": {
+		"prefix": "js-onkeypress",
+		"body": [
+			"onkeypress=$1"
+		],
+		"description": "JAVASCRIPT.onkeypress"
+	  },
+	  "jsOnblur": {
+		"prefix": "js-onblur",
+		"body": [
+			"onBlur=$1"
+		],
+		"description": "JAVASCRIPT.onBlur"
+	  },
+	  "jsOnkeyup": {
+		"prefix": "js-onkeyup",
+		"body": [
+			"onkeyup=$1"
+		],
+		"description": "JAVASCRIPT.onkeyup"
+	  },
+
+
 
 	//VARIABLE
 	"jsVar": {
@@ -420,7 +554,230 @@
 			"};"
         ],
         "description": "JAVASCRIPT.switch-case"
-	 }
+	 },
+
+	 // STRING
+	 "jsStr-charAt": {
+        "prefix": "js-charat",
+        "body": [
+          ".charAt($1)",
+        ],
+        "description": "JAVASCRIPT.Str-charAt"
+	 },
+	 "jsStr-charCodeAt": {
+        "prefix": "js-charCodeAt",
+        "body": [
+          ".charCodeAt($1)",
+        ],
+        "description": "JAVASCRIPT.Str-charCodeAt"
+	 },
+	
+	 "jsStr-indexOf": {
+        "prefix": "js-indexOf",
+        "body": [
+          ".indexOf($1)",
+        ],
+        "description": "JAVASCRIPT.Str-indexOf"
+	 },
+	 
+	 "jsStr-repeat": {
+        "prefix": "js-repeat",
+        "body": [
+          ".repeat($1)",
+        ],
+        "description": "JAVASCRIPT.Str-repeat"
+	 },
+	 "jsStr-replace": {
+        "prefix": "js-replace",
+        "body": [
+          ".replace($1)",
+        ],
+        "description": "JAVASCRIPT.Str-replace"
+	 },
+	 "jsStr-search": {
+        "prefix": "js-search",
+        "body": [
+          ".search($1)",
+        ],
+        "description": "JAVASCRIPT.Str-search"
+	 },
+	 "jsStr-slice": {
+        "prefix": "js-slice",
+        "body": [
+          ".slice($1, $2)",
+        ],
+        "description": "JAVASCRIPT.Str-slice"
+	 },
+	 "jsStr-split": {
+        "prefix": "js-split",
+        "body": [
+          ".split($1)",
+        ],
+        "description": "JAVASCRIPT.Str-split"
+	 },
+	 "jsStr-substr": {
+        "prefix": "js-substr",
+        "body": [
+          ".substr($1, $2)",
+        ],
+        "description": "JAVASCRIPT.Str-substr"
+	 },
+	 "jsStr-substring": {
+        "prefix": "js-substring",
+        "body": [
+          ".substring($1, $2)",
+        ],
+        "description": "JAVASCRIPT.Str-substring"
+	 },
+	 "jsStr-toLocaleLowerCase": {
+        "prefix": "js-toLocaleLowerCase",
+        "body": [
+          ".toLocaleLowerCase()",
+        ],
+        "description": "JAVASCRIPT.Str-toLocaleLowerCase"
+	 },
+	 "jsStr-toLocaleUpperCase": {
+        "prefix": "js-toLocaleUpperCase",
+        "body": [
+          ".toLocaleUpperCase()",
+        ],
+        "description": "JAVASCRIPT.Str-toLocaleUpperCase"
+	 },
+	 "jsStr-toLowerCase": {
+        "prefix": "js-toLowerCase",
+        "body": [
+          ".toLowerCase()",
+        ],
+        "description": "JAVASCRIPT.Str-toLowerCase"
+	 },
+	
+	 "jsStr-toUpperCase": {
+        "prefix": "js-toUpperCase",
+        "body": [
+          ".toUpperCase()",
+        ],
+        "description": "JAVASCRIPT.Str-toUpperCase"
+	 },
+	 "jsStr-trim": {
+        "prefix": "js-trim",
+        "body": [
+          ".trim()",
+        ],
+        "description": "JAVASCRIPT.Str-trim"
+	 },
+
+	 // NUMBER
+	 "jsNum-isFinite": {
+        "prefix": "js-isFinite",
+        "body": [
+          ".isFinite(${1:value})",
+        ],
+        "description": "JAVASCRIPT.Num-isFinite"
+	 }, 
+	 "jsNum-isInteger": {
+        "prefix": "js-isInteger",
+        "body": [
+          ".isInteger(${1:value})",
+        ],
+        "description": "JAVASCRIPT.Num-isInteger"
+	 }, 
+	 "jsNum-isNaN": {
+        "prefix": "js-isNaN",
+        "body": [
+          ".isNaN(${1:value})",
+        ],
+        "description": "JAVASCRIPT.Num-isNaN"
+	 },
+	 "jsNum-isSafeInteger": {
+        "prefix": "js-isSafeInteger",
+        "body": [
+          ".isSafeInteger(${1:value})",
+        ],
+        "description": "JAVASCRIPT.Num-isSafeInteger"
+	 },
+	 "jsNum-toFixed": {
+        "prefix": "js-toFixed",
+        "body": [
+          ".toFixed(${1:value})",
+        ],
+        "description": "JAVASCRIPT.Num-toFixed"
+	 },
+	 "jsNum-toString": {
+        "prefix": "js-toString",
+        "body": [
+          ".toString()",
+        ],
+        "description": "JAVASCRIPT.Num-toString"
+	 },
+
+	 // DATE
+	 "jsDate-getDate": {
+        "prefix": "js-getDate",
+        "body": [
+          ".getDate()",
+        ],
+        "description": "JAVASCRIPT.Date-getDate"
+	 },
+	 "jsDate-getFullYear": {
+        "prefix": "js-getFullYear",
+        "body": [
+          ".getFullYear()",
+        ],
+        "description": "JAVASCRIPT.Date-getFullYear"
+	 },
+
+	 // ARRAY
+	 "jsArr-toString": {
+        "prefix": "js-fill",
+        "body": [
+          ".fill(${1:value}, ${2:start}, ${3:end})",
+        ],
+        "description": "JAVASCRIPT.Arr-fill"
+	 },
+	 
+	 "jsArr-indexOf": {
+        "prefix": "js-indexOf",
+        "body": [
+          ".indexOf(${1:value})",
+        ],
+        "description": "JAVASCRIPT.Arr-indexOf"
+	 },
+
+	 "jsArr-join": {
+        "prefix": "js-join",
+        "body": [
+          ".join(${1:separator})",
+        ],
+        "description": "JAVASCRIPT.Arr-join"
+	 },
+	 "jsArr-push": {
+        "prefix": "js-push",
+        "body": [
+          ".push(${1:item1}, ${2:item2}, ${3:item3})",
+        ],
+        "description": "JAVASCRIPT.Arr-push"
+	 },
+	 "jsArr-reverse": {
+        "prefix": "js-reverse",
+        "body": [
+          ".reverse()",
+        ],
+        "description": "JAVASCRIPT.Arr-reverse"
+	 },
+	 "jsArr-slice": {
+        "prefix": "js-slice",
+        "body": [
+          ".slice(${1:start}, ${2:end})",
+        ],
+        "description": "JAVASCRIPT.Arr-slice"
+	 },
+	 "jsArr-sort": {
+        "prefix": "js-sort",
+        "body": [
+          ".sort()",
+        ],
+        "description": "JAVASCRIPT.Arr-sort"
+	 },
 
 
 

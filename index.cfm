@@ -4,34 +4,20 @@
           <META http-equiv='Content-Type' content='text/html; charset=Shift_JIS'>
           <TITLE></TITLE>
           <SCRIPT type='text/javascript'>
-               function () {
-                    
-               };
-           
+            function  () {
+                 
+               return ;
+            };
           </SCRIPT>
           <STYLE TYPE='text/css'>
           </STYLE>
      </HEAD>
      <BODY>
+          <SELECT id="id" name="name" >
+             <OPTION value="value">dsa</OPTION>
+             <OPTION value="value">das</OPTION>
+             <OPTION value="value"></OPTION>
+          </SELECT>
+
      </BODY>
 </HTML>
-<TD>
-     
-</TD>
-<TABLE style='das'>
-
-     <TR>
-          <TH>dyuwqd</TH>
-          <TH>sduyqw</TH>
-          <TH>dbnyuwqdbuq</TH>
-     </TR>
-     <TR>
-          <TD>dbyuqwedu</TD>
-          <TD>bcyuedgqwe</TD>
-          <TD>g67767</TD>
-     </TR>
-
-</TABLE>
-
-<SPAN></SPAN>
-
