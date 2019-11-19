@@ -242,7 +242,7 @@
 	  "description": "HTML.span"
 	},
   
-	// COLDFUSION
+// COLDFUSION
   
 	"cfmComment": {
 	  "prefix": "cf-comment",
@@ -251,28 +251,38 @@
 	  ],
 	  "description": "COLDFUSION.comment"
 	},
-	// JAVASCRIPT
+// JAVASCRIPT
   
+	// COMMON
 	"jsConsoleLog": {
 	  "prefix": "js-clg",
 	  "body": ["console.log('$1');"],
 	  "description": "JAVASCRIPT.consoleLog"
 	},
+
+	"jsAlert": {
+		"prefix": "js-alert",
+		"body": [
+			"alert('$1');"
+		],
+		"description": "JAVASCRIPT.alert"
+	  },
   
 	"jsFunction": {
 	  "prefix": "js-function",
 	  "body": [
-		"function $1($2) {",
+		"function $1 ($2) {",
 		"     $3",
 		"};"
 	  ],
 	  "description": "JAVASCRIPT.function"
 	},
 
+	//VARIABLE
 	"jsVar": {
 		"prefix": "js-var",
 		"body": [
-		  "var $1 = $2;",
+		  "var $1 = $2;"
 		],
 		"description": "JAVASCRIPT.var"
 	  },
@@ -280,7 +290,7 @@
 	"jsVar-arr": {
 		"prefix": "js-var-arr",
 		"body": [
-		  "var $1 = [$2];",
+		  "var $1 = [$2];"
 		],
 		"description": "JAVASCRIPT.varArr"
 	  },
@@ -288,19 +298,131 @@
 	"jsVar-obj": {
 		"prefix": "js-var-obj",
 		"body": [
-		  "var $1 = {$2};",
+		  "var $1 = {$2};"
 		],
 		"description": "JAVASCRIPT.varObj"
-	  },
+	},
 	
 
+	// DOM
 	"jsDocument-byID": {
 		"prefix": "js-documentGetElementById",
 		"body": [
-		  "document.getElementById($1)$2 = $3;",
+		  "document.getElementById($1)$2 = $3;"
 		],
 		"description": "JAVASCRIPT.documentGetElementById"
+    },
+    
+  "jsDocument": {
+      "prefix": "js-document",
+      "body": [
+        "document.$1;"
+      ],
+      "description": "JAVASCRIPT.document"
+	},
+	"jsDocument-id-value": {
+		"prefix": "js-document-id-value",
+		"body": [
+			"document.getElementById($1).value = $3;"
+		],
+		"description": "JAVASCRIPT.document-id-value"
 	  },
+
+	"jsDocument-id-disabled": {
+		"prefix": "js-document-id-disabled",
+		"body": [
+			"document.getElementById($1).disabled = $3;"
+		],
+		"description": "JAVASCRIPT.document-id-disabled"
+	},
+
+	"jsDocument-id-innerHTML": {
+		"prefix": "js-document-id-innerHTML",
+		"body": [
+			"document.getElementById($1).innerHTML = $3;"
+		],
+		"description": "JAVASCRIPT.document-id-innerHTML"
+	},
+
+	"jsDocument-id-type": {
+		"prefix": "js-document-id-type",
+		"body": [
+			"document.getElementById($1).type = $3;"
+		],
+		"description": "JAVASCRIPT.document-id-type"
+	},
+	"jsDocument-id-style": {
+		"prefix": "js-document-id-style",
+		"body": [
+			"document.getElementById($1).style = $3;"
+		],
+		"description": "JAVASCRIPT.document-id-style"
+	},
+	"jsDocument-id-checked": {
+		"prefix": "js-document-id-checked",
+		"body": [
+			"document.getElementById($1).checked = $3;"
+		],
+		"description": "JAVASCRIPT.document-id-checked"
+	},
+
+	
+	// IF - ELSE - CONDITION
+    "jsIf": {
+        "prefix": "js-if",
+        "body": [
+          "if ($1) {",
+          "   $2",
+          "}"
+        ],
+        "description": "JAVASCRIPT.if"
+     },
+	 "jsIf-else": {
+        "prefix": "js-if-else",
+        "body": [
+			"if ($1) {",
+			"   $2",
+			"} else {",
+			"   $3",
+			"};"
+        ],
+        "description": "JAVASCRIPT.if-else"
+	 },
+	 "jsElse-if": {
+        "prefix": "js-else-if",
+        "body": [
+			"if ($1) {",
+			"   $2",
+			"} else if ($3) {",
+			"   $4",
+			"} else {",
+			"   $5",
+			"};"
+        ],
+        "description": "JAVASCRIPT.else-if"
+	 },
+	 
+	 "jsSwitch-case": {
+        "prefix": "js-switch-case",
+        "body": [
+			"switch ($1) {",
+			"    case $2:",
+			"        $3",
+			"        break;",
+			"    case $4:",
+			"        $5",
+			"        break;",
+			"    case $6:",
+			"        $7",
+			"        break;",
+			"    default:",
+			"        $8",
+			"};"
+        ],
+        "description": "JAVASCRIPT.switch-case"
+	 }
+
+
 
   }
   

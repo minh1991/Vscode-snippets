@@ -4,7 +4,10 @@
           <META http-equiv='Content-Type' content='text/html; charset=Shift_JIS'>
           <TITLE></TITLE>
           <SCRIPT type='text/javascript'>
-          
+               function () {
+                    
+               };
+           
           </SCRIPT>
           <STYLE TYPE='text/css'>
           </STYLE>
