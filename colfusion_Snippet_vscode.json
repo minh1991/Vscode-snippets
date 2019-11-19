@@ -347,24 +347,40 @@
 	"js-length": {
         "prefix": "js-length",
         "body": [
-          ".length",
+          "length"
         ],
         "description": "JAVASCRIPT.length"
 	 },
 	 "js-concat": {
         "prefix": "js-concat",
         "body": [
-          ".concat($1)",
+          "concat($1)"
         ],
         "description": "JAVASCRIPT.concat"
 	 },
 	 "js-toString": {
         "prefix": "js-toString",
         "body": [
-          ".toString()",
+          "toString()"
         ],
         "description": "JAVASCRIPT.toString"
 	 },
+
+	 "js-loopFor": {
+        "prefix": "js-for",
+        "body": [
+		  "for (${1:index} = ${2:value}; ${1:index} < ${3:value2}; ${1:index}++) {",
+		  "    $4",
+		  "};"
+        ],
+        "description": "JAVASCRIPT.loopFor"
+	 },
+
+
+
+
+
+
 
 	// ACTION EVENTS
 	"jsOnclick": {
@@ -507,7 +523,7 @@
         "body": [
           "if ($1) {",
           "   $2",
-          "}"
+          "};"
         ],
         "description": "JAVASCRIPT.if"
      },
@@ -560,14 +576,14 @@
 	 "jsStr-charAt": {
         "prefix": "js-charat",
         "body": [
-          ".charAt($1)",
+          "charAt($1)"
         ],
         "description": "JAVASCRIPT.Str-charAt"
 	 },
 	 "jsStr-charCodeAt": {
         "prefix": "js-charCodeAt",
         "body": [
-          ".charCodeAt($1)",
+          "charCodeAt($1)"
         ],
         "description": "JAVASCRIPT.Str-charCodeAt"
 	 },
@@ -575,7 +591,7 @@
 	 "jsStr-indexOf": {
         "prefix": "js-indexOf",
         "body": [
-          ".indexOf($1)",
+          "indexOf($1)"
         ],
         "description": "JAVASCRIPT.Str-indexOf"
 	 },
@@ -583,70 +599,70 @@
 	 "jsStr-repeat": {
         "prefix": "js-repeat",
         "body": [
-          ".repeat($1)",
+          "repeat($1)"
         ],
         "description": "JAVASCRIPT.Str-repeat"
 	 },
 	 "jsStr-replace": {
         "prefix": "js-replace",
         "body": [
-          ".replace($1)",
+          "replace($1)"
         ],
         "description": "JAVASCRIPT.Str-replace"
 	 },
 	 "jsStr-search": {
         "prefix": "js-search",
         "body": [
-          ".search($1)",
+          "search($1)"
         ],
         "description": "JAVASCRIPT.Str-search"
 	 },
 	 "jsStr-slice": {
         "prefix": "js-slice",
         "body": [
-          ".slice($1, $2)",
+          "slice($1, $2)"
         ],
         "description": "JAVASCRIPT.Str-slice"
 	 },
 	 "jsStr-split": {
         "prefix": "js-split",
         "body": [
-          ".split($1)",
+          "split($1)"
         ],
         "description": "JAVASCRIPT.Str-split"
 	 },
 	 "jsStr-substr": {
         "prefix": "js-substr",
         "body": [
-          ".substr($1, $2)",
+          "substr($1, $2)"
         ],
         "description": "JAVASCRIPT.Str-substr"
 	 },
 	 "jsStr-substring": {
         "prefix": "js-substring",
         "body": [
-          ".substring($1, $2)",
+          "substring($1, $2)"
         ],
         "description": "JAVASCRIPT.Str-substring"
 	 },
 	 "jsStr-toLocaleLowerCase": {
         "prefix": "js-toLocaleLowerCase",
         "body": [
-          ".toLocaleLowerCase()",
+          "toLocaleLowerCase()"
         ],
         "description": "JAVASCRIPT.Str-toLocaleLowerCase"
 	 },
 	 "jsStr-toLocaleUpperCase": {
         "prefix": "js-toLocaleUpperCase",
         "body": [
-          ".toLocaleUpperCase()",
+          "toLocaleUpperCase()"
         ],
         "description": "JAVASCRIPT.Str-toLocaleUpperCase"
 	 },
 	 "jsStr-toLowerCase": {
         "prefix": "js-toLowerCase",
         "body": [
-          ".toLowerCase()",
+          "toLowerCase()"
         ],
         "description": "JAVASCRIPT.Str-toLowerCase"
 	 },
@@ -654,14 +670,14 @@
 	 "jsStr-toUpperCase": {
         "prefix": "js-toUpperCase",
         "body": [
-          ".toUpperCase()",
+          "toUpperCase()"
         ],
         "description": "JAVASCRIPT.Str-toUpperCase"
 	 },
 	 "jsStr-trim": {
         "prefix": "js-trim",
         "body": [
-          ".trim()",
+          "trim()"
         ],
         "description": "JAVASCRIPT.Str-trim"
 	 },
@@ -670,42 +686,42 @@
 	 "jsNum-isFinite": {
         "prefix": "js-isFinite",
         "body": [
-          ".isFinite(${1:value})",
+          "isFinite(${1:value})"
         ],
         "description": "JAVASCRIPT.Num-isFinite"
 	 }, 
 	 "jsNum-isInteger": {
         "prefix": "js-isInteger",
         "body": [
-          ".isInteger(${1:value})",
+          "isInteger(${1:value})"
         ],
         "description": "JAVASCRIPT.Num-isInteger"
 	 }, 
 	 "jsNum-isNaN": {
         "prefix": "js-isNaN",
         "body": [
-          ".isNaN(${1:value})",
+          "isNaN(${1:value})"
         ],
         "description": "JAVASCRIPT.Num-isNaN"
 	 },
 	 "jsNum-isSafeInteger": {
         "prefix": "js-isSafeInteger",
         "body": [
-          ".isSafeInteger(${1:value})",
+          "isSafeInteger(${1:value})"
         ],
         "description": "JAVASCRIPT.Num-isSafeInteger"
 	 },
 	 "jsNum-toFixed": {
         "prefix": "js-toFixed",
         "body": [
-          ".toFixed(${1:value})",
+          "toFixed(${1:value})"
         ],
         "description": "JAVASCRIPT.Num-toFixed"
 	 },
 	 "jsNum-toString": {
         "prefix": "js-toString",
         "body": [
-          ".toString()",
+          "toString()"
         ],
         "description": "JAVASCRIPT.Num-toString"
 	 },
@@ -714,23 +730,30 @@
 	 "jsDate-getDate": {
         "prefix": "js-getDate",
         "body": [
-          ".getDate()",
+          "getDate()"
         ],
         "description": "JAVASCRIPT.Date-getDate"
 	 },
 	 "jsDate-getFullYear": {
         "prefix": "js-getFullYear",
         "body": [
-          ".getFullYear()",
+          "getFullYear()"
         ],
         "description": "JAVASCRIPT.Date-getFullYear"
 	 },
 
 	 // ARRAY
+	 "jsArr-new": {
+        "prefix": "js-new-arr",
+        "body": [
+          "new Array()"
+        ],
+        "description": "JAVASCRIPT.Arr-fill"
+	 },
 	 "jsArr-toString": {
         "prefix": "js-fill",
         "body": [
-          ".fill(${1:value}, ${2:start}, ${3:end})",
+          "fill(${1:value}, ${2:start}, ${3:end})"
         ],
         "description": "JAVASCRIPT.Arr-fill"
 	 },
@@ -738,7 +761,7 @@
 	 "jsArr-indexOf": {
         "prefix": "js-indexOf",
         "body": [
-          ".indexOf(${1:value})",
+          "indexOf(${1:value})"
         ],
         "description": "JAVASCRIPT.Arr-indexOf"
 	 },
@@ -746,39 +769,48 @@
 	 "jsArr-join": {
         "prefix": "js-join",
         "body": [
-          ".join(${1:separator})",
+          "join(${1:separator})"
         ],
         "description": "JAVASCRIPT.Arr-join"
 	 },
 	 "jsArr-push": {
         "prefix": "js-push",
         "body": [
-          ".push(${1:item1}, ${2:item2}, ${3:item3})",
+          "push(${1:item1}, ${2:item2}, ${3:item3})"
         ],
         "description": "JAVASCRIPT.Arr-push"
 	 },
 	 "jsArr-reverse": {
         "prefix": "js-reverse",
         "body": [
-          ".reverse()",
+          "reverse()"
         ],
         "description": "JAVASCRIPT.Arr-reverse"
 	 },
 	 "jsArr-slice": {
         "prefix": "js-slice",
         "body": [
-          ".slice(${1:start}, ${2:end})",
+          "slice(${1:start}, ${2:end})"
         ],
         "description": "JAVASCRIPT.Arr-slice"
 	 },
 	 "jsArr-sort": {
         "prefix": "js-sort",
         "body": [
-          ".sort()",
+          "sort()"
         ],
         "description": "JAVASCRIPT.Arr-sort"
 	 },
 
+
+	 // OBJECT
+	 "jsObj-new": {
+        "prefix": "js-new-obj",
+        "body": [
+          "new Object()"
+        ],
+        "description": "JAVASCRIPT.obj-fill"
+	 },
 
 
   }
