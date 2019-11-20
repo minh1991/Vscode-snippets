@@ -271,7 +271,7 @@
 		"body": [
 		  "<FORM name=${1:name} id=${2:id} method=${3:method}>",
 		  "   $3",
-		  "</FORM>",
+		  "</FORM>"
 		],
 		"description": "HTML.form"
 	  },
@@ -297,7 +297,7 @@
 	  "htmlOption": {
 		"prefix": "ht-option",
 		"body": [
-		  "<OPTION value=${1:value}>$2</OPTION>",
+		  "<OPTION value=${1:value}>$2</OPTION>"
 		],
 		"description": "HTML.option"
 	  },
@@ -417,6 +417,13 @@
         ],
         "description": "JAVASCRIPT.typeof"
 	 },
+	 "js-ShowModalDialog": {
+        "prefix": "js-ShowModalDialog",
+        "body": [
+          "showModalDialog($1)"
+        ],
+        "description": "JAVASCRIPT.ShowModalDialog"
+	 },
 
 
 
@@ -466,6 +473,20 @@
 			"onkeyup=$1"
 		],
 		"description": "JAVASCRIPT.onkeyup"
+	  },
+	  "jsOnsubmit": {
+		"prefix": "js-onsubmit",
+		"body": [
+			"onsubmit=$1"
+		],
+		"description": "JAVASCRIPT.onsubmit"
+	  },
+	  "jsAction": {
+		"prefix": "js-action",
+		"body": [
+			"action=$1"
+		],
+		"description": "JAVASCRIPT.action"
 	  },
 
 
@@ -851,9 +872,314 @@
         "body": [
           "new Object()"
         ],
-        "description": "JAVASCRIPT.obj-fill"
+        "description": "JAVASCRIPT.new-obj"
 	 },
 
+
+	 //DATABASE
+
+	 "db-CREATE-TABLE": {
+        "prefix": "db-create-table",
+        "body": [
+			"CREATE TABLE ${1:table_name} (",
+			"    ${2:col_name}    ${3:col_type}",
+			")"
+        ],
+        "description": "ORACLE.create-tables"
+	 },
+
+	 "db-SELECT": {
+        "prefix": "db-select-table",
+        "body": [
+			"SELECT",
+			"    ${1:col_name}",
+			"FROM",
+			"    ${2:table_name}",
+			"WHERE",
+			"    ${3:condition}",
+			"AND ${4:condition}",
+			"ORDER BY",
+			"    ${5:order_by}"
+        ],
+        "description": "ORACLE.select-tables"
+	 },
+	 "db-INSERT": {
+        "prefix": "db-insert-table",
+        "body": [
+			"INSERT INTO ${1:table_name} (",
+			"    ${2:col_name}",
+			"    ${3:col_name}",
+			"    ${4:col_name}",
+			") VALUES (",
+			"    ${5:value}",
+			"    ${6:value}",
+			"    ${7:value}",
+			")"
+        ],
+        "description": "ORACLE.insert-tables"
+	 },
+	 "db-UPDATE": {
+        "prefix": "db-update-table",
+        "body": [
+			"SELECT ${1:table_name}",
+			"SET",
+			"    ${2:col_name}    =    ${3:value}",
+			"    ${4:col_name}    =    ${5:value}",
+			"    ${6:col_name}    =    ${7:value}",
+			"WHERE",
+			"    ${8:condition}"
+        ],
+        "description": "ORACLE.update-tables"
+	 },
+
+	 "db-DELETE": {
+        "prefix": "db-delete-table",
+        "body": [
+			"DELETE FROM ${1:table_name}",
+			"WHERE",
+			"    ${2:condition}",
+			"AND ${3:condition}"
+        ],
+        "description": "ORACLE.update-tables"
+	 },
+
+
+
+
+	 "db-ASC": {
+        "prefix": "db-asc",
+        "body": [
+			"ASC"
+        ],
+        "description": "ORACLE.asc"
+	 },
+	 "db-DESC": {
+        "prefix": "db-desc",
+        "body": [
+			"DESC"
+        ],
+        "description": "ORACLE.desc"
+	 },
+	 "db-SYSDATE": {
+        "prefix": "db-sysdate",
+        "body": [
+			"SYSDATE"
+        ],
+        "description": "ORACLE.sysdate"
+	 },
+	 "db-UNION": {
+        "prefix": "db-union",
+        "body": [
+			"UNION"
+        ],
+        "description": "ORACLE.union"
+	 },
+	 "db-UNION ALL": {
+        "prefix": "db-union-all",
+        "body": [
+			"UNION ALL"
+        ],
+        "description": "ORACLE.union-all"
+	 },
+	 "db-INTERSECT": {
+        "prefix": "db-intersect",
+        "body": [
+			"INTERSECT"
+        ],
+        "description": "ORACLE.intersect"
+	 },
+	 "db-MINUS": {
+        "prefix": "db-minus",
+        "body": [
+			"MINUS"
+        ],
+        "description": "ORACLE.minus"
+	 },
+
+	 "db-BETWEEN-AND": {
+        "prefix": "db-between-and",
+        "body": [
+			"BETWEEN",
+			"    ${1:condition} ",
+			"AND ${2:condition} "
+        ],
+        "description": "ORACLE.select-tables"
+	 },
+	 "db-CASE-END": {
+        "prefix": "db-case-end",
+        "body": [
+			"CASE ${1:col_name} WHEN ${2:condition_1} THEN ${3:result_1}",
+			"                   WHEN ${4:condition_2} THEN ${5:result_2}",
+			"            ELSE ${6:result}",
+			"            END AS ${7:name}",
+        ],
+        "description": "ORACLE.case-end"
+	 },
+	 "db-AND": {
+        "prefix": "db-and",
+        "body": [
+			"AND ${1:condition} "
+        ],
+        "description": "ORACLE.and"
+	 },
+	 "db-OR": {
+        "prefix": "db-or",
+        "body": [
+			"OR ${1:condition} "
+        ],
+        "description": "ORACLE.or"
+	 },
+	 "db-NOT": {
+        "prefix": "db-not",
+        "body": [
+			"NOT ${1:condition} "
+        ],
+        "description": "ORACLE.not"
+	 },
+	 "db-NULL": {
+        "prefix": "db-null",
+        "body": [
+			"NULL ${1:condition} "
+        ],
+        "description": "ORACLE.null"
+	 },
+	 "db-LOWER": {
+        "prefix": "db-lower",
+        "body": [
+			"LOWER ${1:col_name} "
+        ],
+        "description": "ORACLE.lower"
+	 },
+	 "db-UPPER": {
+        "prefix": "db-upper",
+        "body": [
+			"UPPER ${1:col_name}"
+        ],
+        "description": "ORACLE.upper"
+	 },
+	 "db-AS": {
+        "prefix": "db-as",
+        "body": [
+			"AS ${1:name}"
+        ],
+        "description": "ORACLE.as"
+	 },
+	 
+
+	 "db-AVG": {
+        "prefix": "db-avg",
+        "body": [
+			"AVG ${1:exp}"
+        ],
+        "description": "ORACLE.avg"
+	 },
+	 "db-COUNT": {
+        "prefix": "db-count",
+        "body": [
+			"COUNT ${1:exp}"
+        ],
+        "description": "ORACLE.count"
+	 },
+	 "db-MAX": {
+        "prefix": "db-max",
+        "body": [
+			"MAX ${1:exp}"
+        ],
+        "description": "ORACLE.max"
+	 },
+	 "db-MIN": {
+        "prefix": "db-min",
+        "body": [
+			"MIN ${1:exp}"
+        ],
+        "description": "ORACLE.min"
+	 },
+	 "db-HAVING": {
+        "prefix": "db-having",
+        "body": [
+			"HAVING ${1:exp}"
+        ],
+        "description": "ORACLE.having"
+	 },
+
+
+	 "db-IN": {
+        "prefix": "db-in",
+        "body": [
+			"IN ($1, $2)"
+        ],
+        "description": "ORACLE.in"
+	 },
+	 "db-SUBSTR": {
+        "prefix": "db-substr",
+        "body": [
+			"SUBSTR ('${1:string}', ${2:start}, ${3:end})"
+        ],
+        "description": "ORACLE.substr"
+	 },
+	 "db-LENGTH": {
+        "prefix": "db-length",
+        "body": [
+			"LENGTH ('${1:string}')"
+        ],
+        "description": "ORACLE.length"
+	 },
+	 "db-TRIM": {
+        "prefix": "db-trim",
+        "body": [
+			"TRIM ('${1:string}')"
+        ],
+        "description": "ORACLE.trim"
+	 },
+	 "db-TO_NUMBER": {
+        "prefix": "db-to-number",
+        "body": [
+			"TO_NUMBER ('${1:string}')"
+        ],
+        "description": "ORACLE.to-number"
+	 },
+	 "db-TO_CHAR": {
+        "prefix": "db-to-char",
+        "body": [
+			"TO_CHAR ('${1:value}')"
+        ],
+        "description": "ORACLE.to-char"
+	 },
+	 "db-TO_DATE": {
+        "prefix": "db-to-date",
+        "body": [
+			"TO_DATE ('${1:string}')"
+        ],
+        "description": "ORACLE.to-date"
+	 },
+	 "db-REPLACE": {
+        "prefix": "db-replace",
+        "body": [
+			"REPLACE ('${1:string}', ${2:string_to_replace}, ${3:replacement_string})"
+        ],
+        "description": "ORACLE.substr"
+	 },
+	 "db-NVL": {
+        "prefix": "db-nvl",
+        "body": [
+			"NVL (${1:value1}, ${2:value1})"
+        ],
+        "description": "ORACLE.nvl"
+	 },
+	 "db-COALESCE": {
+        "prefix": "db-coalesce",
+        "body": [
+			"COALESCE  (${1:exp_1}, ${2:exp_2})"
+        ],
+        "description": "ORACLE.coalesce"
+	 },
+	 "db-LIKE": {
+        "prefix": "db-like",
+        "body": [
+			"LIKE '$1",
+        ],
+        "description": "ORACLE.like"
+	 }
 
   }
   
