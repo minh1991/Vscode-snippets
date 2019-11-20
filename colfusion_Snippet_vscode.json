@@ -425,6 +425,35 @@
         "description": "JAVASCRIPT.ShowModalDialog"
 	 },
 
+	 "js-WindowOpen": {
+        "prefix": "js-WindowOpen",
+        "body": [
+          "window.open($1);"
+        ],
+        "description": "JAVASCRIPT.WindowOpen"
+	 },
+	 "js-WindowFocus": {
+        "prefix": "js-WindowFocus",
+        "body": [
+          "window.focus();"
+        ],
+        "description": "JAVASCRIPT.WindowFocus"
+	 },
+	 "js-WindowClose": {
+        "prefix": "js-WindowClose",
+        "body": [
+          "window.close();"
+        ],
+        "description": "JAVASCRIPT.Windowclose"
+	 },
+	 "js-WindowEvent": {
+        "prefix": "js-WindowEvent",
+        "body": [
+          "window.event;"
+        ],
+        "description": "JAVASCRIPT.WindowEvent"
+	 },
+
 
 
 
@@ -1176,7 +1205,7 @@
 	 "db-LIKE": {
         "prefix": "db-like",
         "body": [
-			"LIKE '$1",
+			"LIKE '$1"
         ],
         "description": "ORACLE.like"
 	 }
