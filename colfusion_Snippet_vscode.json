@@ -1,1214 +1,950 @@
 {
-	"fileInfo": {
-	  "prefix": "info",
-	  "body": [
-		"<!-----------------------------------------------------------------------------",
-		"   Program Name        :        $1",
-		"   Author              :        $2",
-		"   Input               :        $3",
-		"   Output              :        $4",
-		"   Return              :        $5",
-		"   Function            :        $6",
-		"   Update              :        $7  $8  $9",
-		"------------------------------------------------------------------------------>"
-	  ],
-	  "description": "Program Name, Author"
-	},
-	"htmlCreate": {
-	  "prefix": "ht-!",
-	  "body": [
-		"<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN'>",
-		"<HTML>",
-		"     <HEAD>",
-		"          <META http-equiv='Content-Type' content='text/html; charset=Shift_JIS'>",
-		"          <TITLE>$1</TITLE>",
-		"          <SCRIPT type='text/javascript'>",
-		"          </SCRIPT>",
-		"          <STYLE TYPE='text/css'>",
-		"          </STYLE>",
-		"     </HEAD>",
-		"     <BODY>",
-		"     </BODY>",
-		"</HTML>"
-	  ],
-	  "description": "HTML"
-	},
-  
-	"htmlScript": {
-	  "prefix": "ht-script",
-	  "body": [
-		"<SCRIPT>$1</SCRIPT>"
-	  ],
-	  "description": "HTML.script"
-	},
-  
-  
-  
-  
-  
-  
-	"html-H1": {
-	  "prefix": "ht-H1",
-	  "body": ["<H1>$1</H1>"],
-	  "description": "HTML.H1"
-	},
-	"html-H2": {
-	  "prefix": "ht-H2",
-	  "body": ["<H2>$1</H2>"],
-	  "description": "HTML.H2"
-	},
-	"html-H3": {
-	  "prefix": "ht-H3",
-	  "body": ["<H3>$1</H3>"],
-	  "description": "HTML.H3"
-	},
-	"html-H4": {
-	  "prefix": "ht-H4",
-	  "body": ["<H4>$1</H4>"],
-	  "description": "HTML.H4"
-	},
-	"html-H5": {
-	  "prefix": "ht-H5",
-	  "body": ["<H5>$1</H5>"],
-	  "description": "HTML.H5"
-	},
-	"html-H6": {
-	  "prefix": "ht-H6",
-	  "body": ["<H6>$1</H6>"],
-	  "description": "HTML.H6"
-	},
-	"html-p": {
-	  "prefix": "ht-P",
-	  "body": ["<P>$1</P>"],
-	  "description": "HTML.P"
-	},
-	"html-BR": {
-	  "prefix": "ht-BR",
-	  "body": ["</BR>"],
-	  "description": "HTML.BR"
-	},
-	"html-SMALL": {
-	  "prefix": "ht-SMALL",
-	  "body": ["<SMALL>$1</SMALL>"],
-	  "description": "HTML.SMALL"
-	},
-	"html-STRONG": {
-	  "prefix": "ht-SRONG",
-	  "body": ["<STRONG>$1</STRONG>"],
-	  "description": "HTML.STRONG"
-	},
-	"html-FRAMESET": {
-	  "prefix": "ht-FRAMESET",
-	  "body": [
-		"<FRAMESET cols= ${1:cols}>",
-		"    <FRAME src= ${2:src}>",
-		"    <FRAME src= ${3:src}>",
-		"    <FRAME src= ${4:src}>",
-		"</FRAMESET>"
-	  ],
-	  "description": "HTML.FRAMESET"
-	},
-	"html-FRAME": {
-	  "prefix": "ht-FRAME",
-	  "body": ["<FRAME src= ${1:src}>"],
-	  "description": "HTML.FRAME"
-	},
-	"html-IFRAME": {
-	  "prefix": "ht-IFRAME",
-	  "body": ["<IFRAME src= ${1:src}></IFRAME>"],
-	  "description": "HTML.IFRAME"
-	},
-	"html-NOFRAME": {
-	  "prefix": "ht-NOFRAME",
-	  "body": ["<NOFRAME>$1</NOFRAME>"],
-	  "description": "HTML.NOFRAME"
-	},
-	"html-IMG": {
-	  "prefix": "ht-IMG",
-	  "body": ["<IMG src= ${1:src} alt= ${2:alt} height= ${3:alt} width= ${4:width}>"],
-	  "description": "HTML.IMG"
-	},
-	"html-A": {
-	  "prefix": "ht-A",
-	  "body": ["<A href= ${1:href}>$2</A>"],
-	  "description": "HTML.A"
-	},
-	"htmlDiv": {
-	  "prefix": "ht-div",
-	  "body": ["<DIV>$1</DIV>"],
-	  "description": "HTML.div"
-	},
-  
-	"htmlUl": {
-	  "prefix": "ht-ul",
-	  "body": [
-		"<UL>",
-		"   <LI>$1</LI>",
-		"   <LI>$2</LI>",
-		"   <LI>$3</LI>",
-		"</UL>"
-	  ],
-	  "description": "HTML.Ul"
-	},
-  
-	"htmlLi": {
-	  "prefix": "ht-li",
-	  "body": [
-		"<LI>$1</LI>"
-	  ],
-	  "description": "HTML.Li"
-	},
-  
-	"htmlTable-All": {
-	  "prefix": "ht-tbl-all",
-	  "body": [
-		"<TABLE>",
-		"   <TR>",
-		"       <TH>$1</TH>",
-		"       <TH>$2</TH>",
-		"       <TH>$3</TH>",
-		"       <TH>$4</TH>",
-		"   </TR>",
-  
-		"   <TR>",
-		"       <TD>$5</TD>",
-		"       <TD>$6</TD>",
-		"       <TD>$7</TD>",
-		"       <TD>$8</TD>",
-		"   </TR>",
-		"</TABLE>"
-	  ],
-	  "description": "HTML.Table"
-	},
+  "fileInfo": {
+    "prefix": "info",
+    "body": [
+      "<!-----------------------------------------------------------------------------",
+      "   Program Name        :        $1",
+      "   Author              :        $2",
+      "   Input               :        $3",
+      "   Output              :        $4",
+      "   Return              :        $5",
+      "   Function            :        $6",
+      "   Update              :        $7  $8  $9",
+      "------------------------------------------------------------------------------>"
+    ],
+    "description": "Program Name, Author"
+  },
+  "htmlCreate": {
+    "prefix": "ht-!",
+    "body": [
+      "<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN'>",
+      "<HTML>",
+      "     <HEAD>",
+      "          <META http-equiv='Content-Type' content='text/html; charset=Shift_JIS'>",
+      "          <TITLE>$1</TITLE>",
+      "          <SCRIPT type='text/javascript'>",
+      "          </SCRIPT>",
+      "          <STYLE TYPE='text/css'>",
+      "          </STYLE>",
+      "     </HEAD>",
+      "     <BODY>",
+      "     </BODY>",
+      "</HTML>"
+    ],
+    "description": "HTML"
+  },
 
-	"htmlColspan": {
-		"prefix": "ht-colspan",
-		"body": [
-		  "colspan=${1:colspan}"
-		],
-		"description": "HTML.colspan"
-	  },
-	  "htmlRowspan": {
-		"prefix": "ht-rowspan",
-		"body": [
-		  "rowspan=${1:rowspan}"
-		],
-		"description": "HTML.rowspan"
-	  },
+  "htmlScript": {
+    "prefix": "ht-script",
+    "body": ["<SCRIPT>$1</SCRIPT>"],
+    "description": "HTML.script"
+  },
 
-	  "htmlColgroup": {
-		"prefix": "ht-colgroup",
-		"body": [
-		  "<COLGROUP>",
-		  "   <COL span=${1:span} width=${2:width}>",
-		  "   <COL span=${3:span} width=${4:width}>",
-		  "   <COL span=${5:span} width=${6:width}>",
-		  "</COLGROUP>"
-		],
-		"description": "HTML.colgroup"
-	  },
-  
-	"htmlTr": {
-	  "prefix": "ht-tr",
-	  "body": [
-		"<TR>$1</TR>"
-	  ],
-	  "description": "HTML.Tr"
-	},
-	"htmlTh": {
-	  "prefix": "ht-th",
-	  "body": [
-		"<TH>$1</TH>"
-	  ],
-	  "description": "HTML.Th"
-	},
-	"htmlTd": {
-	  "prefix": "ht-td",
-	  "body": [
-		"<TD>$1</TD>"
-	  ],
-	  "description": "HTML.Td"
-	},
-	"htmlTable": {
-	  "prefix": "ht-tbl",
-	  "body": [
-		"<TABLE>$1</TABLE>"
-	  ],
-	  "description": "HTML.tbl"
-	},
-  
-	"htmlThead": {
-	  "prefix": "ht-thead",
-	  "body": [
-		"<THEAD>$1</THEAD>"
-	  ],
-	  "description": "HTML.thead"
-	},
-	"htmlTbody": {
-	  "prefix": "ht-tbody",
-	  "body": [
-		"<TBODY>$1</TBODY>"
-	  ],
-	  "description": "HTML.tbody"
-	},
-	"htmlTfoot": {
-	  "prefix": "ht-tfoot",
-	  "body": [
-		"<TFOOT>$1</TFOOT>"
-	  ],
-	  "description": "HTML.tfoot"
-	},
-  
-	"htmlSpan": {
-	  "prefix": "ht-span",
-	  "body": [
-		"<SPAN>$1</SPAN>"
-	  ],
-	  "description": "HTML.span"
-	},
-	"htmlForm": {
-		"prefix": "ht-form",
-		"body": [
-		  "<FORM name=${1:name} id=${2:id} method=${3:method}>",
-		  "   $3",
-		  "</FORM>"
-		],
-		"description": "HTML.form"
-	  },
+  "html-H1": {
+    "prefix": "ht-H1",
+    "body": ["<H1>$1</H1>"],
+    "description": "HTML.H1"
+  },
+  "html-H2": {
+    "prefix": "ht-H2",
+    "body": ["<H2>$1</H2>"],
+    "description": "HTML.H2"
+  },
+  "html-H3": {
+    "prefix": "ht-H3",
+    "body": ["<H3>$1</H3>"],
+    "description": "HTML.H3"
+  },
+  "html-H4": {
+    "prefix": "ht-H4",
+    "body": ["<H4>$1</H4>"],
+    "description": "HTML.H4"
+  },
+  "html-H5": {
+    "prefix": "ht-H5",
+    "body": ["<H5>$1</H5>"],
+    "description": "HTML.H5"
+  },
+  "html-H6": {
+    "prefix": "ht-H6",
+    "body": ["<H6>$1</H6>"],
+    "description": "HTML.H6"
+  },
+  "html-p": {
+    "prefix": "ht-P",
+    "body": ["<P>$1</P>"],
+    "description": "HTML.P"
+  },
+  "html-BR": {
+    "prefix": "ht-BR",
+    "body": ["</BR>"],
+    "description": "HTML.BR"
+  },
+  "html-SMALL": {
+    "prefix": "ht-SMALL",
+    "body": ["<SMALL>$1</SMALL>"],
+    "description": "HTML.SMALL"
+  },
+  "html-STRONG": {
+    "prefix": "ht-SRONG",
+    "body": ["<STRONG>$1</STRONG>"],
+    "description": "HTML.STRONG"
+  },
+  "html-FRAMESET": {
+    "prefix": "ht-FRAMESET",
+    "body": [
+      "<FRAMESET cols= ${1:cols}>",
+      "    <FRAME src= ${2:src}>",
+      "    <FRAME src= ${3:src}>",
+      "    <FRAME src= ${4:src}>",
+      "</FRAMESET>"
+    ],
+    "description": "HTML.FRAMESET"
+  },
+  "html-FRAME": {
+    "prefix": "ht-FRAME",
+    "body": ["<FRAME src= ${1:src}>"],
+    "description": "HTML.FRAME"
+  },
+  "html-IFRAME": {
+    "prefix": "ht-IFRAME",
+    "body": ["<IFRAME src= ${1:src}></IFRAME>"],
+    "description": "HTML.IFRAME"
+  },
+  "html-NOFRAME": {
+    "prefix": "ht-NOFRAME",
+    "body": ["<NOFRAME>$1</NOFRAME>"],
+    "description": "HTML.NOFRAME"
+  },
+  "html-IMG": {
+    "prefix": "ht-IMG",
+    "body": [
+      "<IMG src= ${1:src} alt= ${2:alt} height= ${3:alt} width= ${4:width}>"
+    ],
+    "description": "HTML.IMG"
+  },
+  "html-A": {
+    "prefix": "ht-A",
+    "body": ["<A href= ${1:href}>$2</A>"],
+    "description": "HTML.A"
+  },
+  "htmlDiv": {
+    "prefix": "ht-div",
+    "body": ["<DIV>$1</DIV>"],
+    "description": "HTML.div"
+  },
 
-	  "htmlInput": {
-		"prefix": "ht-input",
-		"body": [
-		  "<INPUT type=${1:type} name=${2:name} id=${3:id} value=${4:value} maxlength=${5:maxlength} class=${6:class} ${7:readonly} ${8:disabled}>"
-		],
-		"description": "HTML.span"
-	  },
-	  "htmlSelect-option": {
-		"prefix": "ht-select-option",
-		"body": [
-		  "<SELECT id=${1:id} name=${2:name} >",
-		  "   <OPTION value=${3:value}>$4</OPTION>",
-		  "   <OPTION value=${5:value}>$6</OPTION>",
-		  "   <OPTION value=${7:value}>$8</OPTION>",
-		  "</SELECT>"
-		],
-		"description": "HTML.select-option"
-	  },
-	  "htmlOption": {
-		"prefix": "ht-option",
-		"body": [
-		  "<OPTION value=${1:value}>$2</OPTION>"
-		],
-		"description": "HTML.option"
-	  },
+  "htmlUl": {
+    "prefix": "ht-ul",
+    "body": [
+      "<UL>",
+      "   <LI>$1</LI>",
+      "   <LI>$2</LI>",
+      "   <LI>$3</LI>",
+      "</UL>"
+    ],
+    "description": "HTML.Ul"
+  },
 
+  "htmlLi": {
+    "prefix": "ht-li",
+    "body": ["<LI>$1</LI>"],
+    "description": "HTML.Li"
+  },
 
+  "htmlTable-All": {
+    "prefix": "ht-tbl-all",
+    "body": [
+      "<TABLE>",
+      "   <TR>",
+      "       <TH>$1</TH>",
+      "       <TH>$2</TH>",
+      "       <TH>$3</TH>",
+      "       <TH>$4</TH>",
+      "   </TR>",
 
-// COLDFUSION
-  
-	"cfmComment": {
-	  "prefix": "cf-comment",
-	  "body": [
-		"<!---  $1  --->"
-	  ],
-	  "description": "COLDFUSION.comment"
-	},
+      "   <TR>",
+      "       <TD>$5</TD>",
+      "       <TD>$6</TD>",
+      "       <TD>$7</TD>",
+      "       <TD>$8</TD>",
+      "   </TR>",
+      "</TABLE>"
+    ],
+    "description": "HTML.Table"
+  },
 
+  "htmlColspan": {
+    "prefix": "ht-colspan",
+    "body": ["colspan=${1:colspan}"],
+    "description": "HTML.colspan"
+  },
+  "htmlRowspan": {
+    "prefix": "ht-rowspan",
+    "body": ["rowspan=${1:rowspan}"],
+    "description": "HTML.rowspan"
+  },
 
+  "htmlColgroup": {
+    "prefix": "ht-colgroup",
+    "body": [
+      "<COLGROUP>",
+      "   <COL span=${1:span} width=${2:width}>",
+      "   <COL span=${3:span} width=${4:width}>",
+      "   <COL span=${5:span} width=${6:width}>",
+      "</COLGROUP>"
+    ],
+    "description": "HTML.colgroup"
+  },
 
+  "htmlTr": {
+    "prefix": "ht-tr",
+    "body": ["<TR>$1</TR>"],
+    "description": "HTML.Tr"
+  },
+  "htmlTh": {
+    "prefix": "ht-th",
+    "body": ["<TH>$1</TH>"],
+    "description": "HTML.Th"
+  },
+  "htmlTd": {
+    "prefix": "ht-td",
+    "body": ["<TD>$1</TD>"],
+    "description": "HTML.Td"
+  },
+  "htmlTable": {
+    "prefix": "ht-tbl",
+    "body": ["<TABLE>$1</TABLE>"],
+    "description": "HTML.tbl"
+  },
 
-// JAVASCRIPT
-  
-	// COMMON
-	"jsConsoleLog": {
-	  "prefix": "js-clg",
-	  "body": ["console.log('$1');"],
-	  "description": "JAVASCRIPT.consoleLog"
-	},
+  "htmlThead": {
+    "prefix": "ht-thead",
+    "body": ["<THEAD>$1</THEAD>"],
+    "description": "HTML.thead"
+  },
+  "htmlTbody": {
+    "prefix": "ht-tbody",
+    "body": ["<TBODY>$1</TBODY>"],
+    "description": "HTML.tbody"
+  },
+  "htmlTfoot": {
+    "prefix": "ht-tfoot",
+    "body": ["<TFOOT>$1</TFOOT>"],
+    "description": "HTML.tfoot"
+  },
 
-	"jsAlert": {
-		"prefix": "js-alert",
-		"body": [
-			"alert('$1');"
-		],
-		"description": "JAVASCRIPT.alert"
-	  },
-  
-	"jsFunction": {
-	  "prefix": "js-function",
-	  "body": [
-		"function $1 ($2) {",
-		"     $3",
-		"   return $4;",
-		"};"
-	  ],
-	  "description": "JAVASCRIPT.function"
-	},
-	"js-length": {
-        "prefix": "js-length",
-        "body": [
-          "length"
-        ],
-        "description": "JAVASCRIPT.length"
-	 },
-	 "js-concat": {
-        "prefix": "js-concat",
-        "body": [
-          "concat($1)"
-        ],
-        "description": "JAVASCRIPT.concat"
-	 },
-	 "js-toString": {
-        "prefix": "js-toString",
-        "body": [
-          "toString()"
-        ],
-        "description": "JAVASCRIPT.toString"
-	 },
+  "htmlSpan": {
+    "prefix": "ht-span",
+    "body": ["<SPAN>$1</SPAN>"],
+    "description": "HTML.span"
+  },
+  "htmlForm": {
+    "prefix": "ht-form",
+    "body": [
+      "<FORM name=${1:name} id=${2:id} method=${3:method}>",
+      "   $3",
+      "</FORM>"
+    ],
+    "description": "HTML.form"
+  },
 
-	 "js-loopFor": {
-        "prefix": "js-for",
-        "body": [
-		  "for (${1:index} = ${2:value}; ${1:index} < ${3:value2}; ${1:index}++) {",
-		  "    $4",
-		  "};"
-        ],
-        "description": "JAVASCRIPT.loopFor"
-	 },
-	 "js-parseInt": {
-        "prefix": "js-parseInt",
-        "body": [
-          "parseInt($1)"
-        ],
-        "description": "JAVASCRIPT.parseInt"
-	 },
-	 "js-parseFloat": {
-        "prefix": "js-parseFloat",
-        "body": [
-          "parseFloat($1)"
-        ],
-        "description": "JAVASCRIPT.parseFloat"
-	 },
-	 "js-Number": {
-        "prefix": "js-Number",
-        "body": [
-          "Number($1)"
-        ],
-        "description": "JAVASCRIPT.Number"
-	 },
-	 "js-String": {
-        "prefix": "js-String",
-        "body": [
-          "String($1)"
-        ],
-        "description": "JAVASCRIPT.String"
-	 },
-	 "js-eval": {
-        "prefix": "js-eval",
-        "body": [
-          "eval($1)"
-        ],
-        "description": "JAVASCRIPT.eval"
-	 },
-	 "js-typeof": {
-        "prefix": "js-typeof",
-        "body": [
-          "typeof $1"
-        ],
-        "description": "JAVASCRIPT.typeof"
-	 },
-	 "js-ShowModalDialog": {
-        "prefix": "js-ShowModalDialog",
-        "body": [
-          "showModalDialog($1)"
-        ],
-        "description": "JAVASCRIPT.ShowModalDialog"
-	 },
+  "htmlInput": {
+    "prefix": "ht-input",
+    "body": [
+      "<INPUT type=${1:type} name=${2:name} id=${3:id} value=${4:value} maxlength=${5:maxlength} class=${6:class} ${7:readonly} ${8:disabled}>"
+    ],
+    "description": "HTML.span"
+  },
+  "htmlSelect-option": {
+    "prefix": "ht-select-option",
+    "body": [
+      "<SELECT id=${1:id} name=${2:name} >",
+      "   <OPTION value=${3:value}>$4</OPTION>",
+      "   <OPTION value=${5:value}>$6</OPTION>",
+      "   <OPTION value=${7:value}>$8</OPTION>",
+      "</SELECT>"
+    ],
+    "description": "HTML.select-option"
+  },
+  "htmlOption": {
+    "prefix": "ht-option",
+    "body": ["<OPTION value=${1:value}>$2</OPTION>"],
+    "description": "HTML.option"
+  },
 
-	 "js-WindowOpen": {
-        "prefix": "js-WindowOpen",
-        "body": [
-          "window.open($1);"
-        ],
-        "description": "JAVASCRIPT.WindowOpen"
-	 },
-	 "js-WindowFocus": {
-        "prefix": "js-WindowFocus",
-        "body": [
-          "window.focus();"
-        ],
-        "description": "JAVASCRIPT.WindowFocus"
-	 },
-	 "js-WindowClose": {
-        "prefix": "js-WindowClose",
-        "body": [
-          "window.close();"
-        ],
-        "description": "JAVASCRIPT.Windowclose"
-	 },
-	 "js-WindowEvent": {
-        "prefix": "js-WindowEvent",
-        "body": [
-          "window.event;"
-        ],
-        "description": "JAVASCRIPT.WindowEvent"
-	 },
+  // COLDFUSION
 
+  "cfmComment": {
+    "prefix": "cf-comment",
+    "body": ["<!---  $1  --->"],
+    "description": "COLDFUSION.comment"
+  },
 
+  // JAVASCRIPT
 
+  // COMMON
+  "jsConsoleLog": {
+    "prefix": "js-clg",
+    "body": ["console.log('$1');"],
+    "description": "JAVASCRIPT.consoleLog"
+  },
 
+  "jsAlert": {
+    "prefix": "js-alert",
+    "body": ["alert('$1');"],
+    "description": "JAVASCRIPT.alert"
+  },
 
+  "jsFunction": {
+    "prefix": "js-function",
+    "body": ["function $1 ($2) {", "     $3", "   return $4;", "};"],
+    "description": "JAVASCRIPT.function"
+  },
+  "js-length": {
+    "prefix": "js-length",
+    "body": ["length"],
+    "description": "JAVASCRIPT.length"
+  },
+  "js-concat": {
+    "prefix": "js-concat",
+    "body": ["concat($1)"],
+    "description": "JAVASCRIPT.concat"
+  },
+  "js-toString": {
+    "prefix": "js-toString",
+    "body": ["toString()"],
+    "description": "JAVASCRIPT.toString"
+  },
 
+  "js-loopFor": {
+    "prefix": "js-for",
+    "body": [
+      "for (${1:index} = ${2:value}; ${1:index} < ${3:value2}; ${1:index}++) {",
+      "    $4",
+      "};"
+    ],
+    "description": "JAVASCRIPT.loopFor"
+  },
+  "js-parseInt": {
+    "prefix": "js-parseInt",
+    "body": ["parseInt($1)"],
+    "description": "JAVASCRIPT.parseInt"
+  },
+  "js-parseFloat": {
+    "prefix": "js-parseFloat",
+    "body": ["parseFloat($1)"],
+    "description": "JAVASCRIPT.parseFloat"
+  },
+  "js-Number": {
+    "prefix": "js-Number",
+    "body": ["Number($1)"],
+    "description": "JAVASCRIPT.Number"
+  },
+  "js-String": {
+    "prefix": "js-String",
+    "body": ["String($1)"],
+    "description": "JAVASCRIPT.String"
+  },
+  "js-eval": {
+    "prefix": "js-eval",
+    "body": ["eval($1)"],
+    "description": "JAVASCRIPT.eval"
+  },
+  "js-typeof": {
+    "prefix": "js-typeof",
+    "body": ["typeof $1"],
+    "description": "JAVASCRIPT.typeof"
+  },
+  "js-ShowModalDialog": {
+    "prefix": "js-ShowModalDialog",
+    "body": ["showModalDialog($1)"],
+    "description": "JAVASCRIPT.ShowModalDialog"
+  },
 
-	// ACTION EVENTS
-	"jsOnclick": {
-		"prefix": "js-onclick",
-		"body": [
-			"onClick=$1"
-		],
-		"description": "JAVASCRIPT.onclick"
-	  },
-	  "jsOnchange": {
-		"prefix": "js-onchange",
-		"body": [
-			"onChange=$1"
-		],
-		"description": "JAVASCRIPT.onchange"
-	  },
-	  "jsOnload": {
-		"prefix": "js-onload",
-		"body": [
-			"onLoad=$1"
-		],
-		"description": "JAVASCRIPT.onload"
-	  },
-	  "jsOnkeypress": {
-		"prefix": "js-onkeypress",
-		"body": [
-			"onkeypress=$1"
-		],
-		"description": "JAVASCRIPT.onkeypress"
-	  },
-	  "jsOnblur": {
-		"prefix": "js-onblur",
-		"body": [
-			"onBlur=$1"
-		],
-		"description": "JAVASCRIPT.onBlur"
-	  },
-	  "jsOnkeyup": {
-		"prefix": "js-onkeyup",
-		"body": [
-			"onkeyup=$1"
-		],
-		"description": "JAVASCRIPT.onkeyup"
-	  },
-	  "jsOnsubmit": {
-		"prefix": "js-onsubmit",
-		"body": [
-			"onsubmit=$1"
-		],
-		"description": "JAVASCRIPT.onsubmit"
-	  },
-	  "jsAction": {
-		"prefix": "js-action",
-		"body": [
-			"action=$1"
-		],
-		"description": "JAVASCRIPT.action"
-	  },
+  "js-WindowOpen": {
+    "prefix": "js-WindowOpen",
+    "body": ["window.open($1);"],
+    "description": "JAVASCRIPT.WindowOpen"
+  },
+  "js-WindowFocus": {
+    "prefix": "js-WindowFocus",
+    "body": ["window.focus();"],
+    "description": "JAVASCRIPT.WindowFocus"
+  },
+  "js-WindowClose": {
+    "prefix": "js-WindowClose",
+    "body": ["window.close();"],
+    "description": "JAVASCRIPT.Windowclose"
+  },
+  "js-WindowEvent": {
+    "prefix": "js-WindowEvent",
+    "body": ["window.event;"],
+    "description": "JAVASCRIPT.WindowEvent"
+  },
 
+  // ACTION EVENTS
+  "jsOnclick": {
+    "prefix": "js-onclick",
+    "body": ["onClick=$1"],
+    "description": "JAVASCRIPT.onclick"
+  },
+  "jsOnchange": {
+    "prefix": "js-onchange",
+    "body": ["onChange=$1"],
+    "description": "JAVASCRIPT.onchange"
+  },
+  "jsOnload": {
+    "prefix": "js-onload",
+    "body": ["onLoad=$1"],
+    "description": "JAVASCRIPT.onload"
+  },
+  "jsOnkeypress": {
+    "prefix": "js-onkeypress",
+    "body": ["onkeypress=$1"],
+    "description": "JAVASCRIPT.onkeypress"
+  },
+  "jsOnblur": {
+    "prefix": "js-onblur",
+    "body": ["onBlur=$1"],
+    "description": "JAVASCRIPT.onBlur"
+  },
+  "jsOnkeyup": {
+    "prefix": "js-onkeyup",
+    "body": ["onkeyup=$1"],
+    "description": "JAVASCRIPT.onkeyup"
+  },
+  "jsOnsubmit": {
+    "prefix": "js-onsubmit",
+    "body": ["onsubmit=$1"],
+    "description": "JAVASCRIPT.onsubmit"
+  },
+  "jsAction": {
+    "prefix": "js-action",
+    "body": ["action=$1"],
+    "description": "JAVASCRIPT.action"
+  },
 
+  //VARIABLE
+  "jsVar": {
+    "prefix": "js-var",
+    "body": ["var $1 = $2;"],
+    "description": "JAVASCRIPT.var"
+  },
 
-	//VARIABLE
-	"jsVar": {
-		"prefix": "js-var",
-		"body": [
-		  "var $1 = $2;"
-		],
-		"description": "JAVASCRIPT.var"
-	  },
+  "jsVar-arr": {
+    "prefix": "js-var-arr",
+    "body": ["var $1 = [$2];"],
+    "description": "JAVASCRIPT.varArr"
+  },
 
-	"jsVar-arr": {
-		"prefix": "js-var-arr",
-		"body": [
-		  "var $1 = [$2];"
-		],
-		"description": "JAVASCRIPT.varArr"
-	  },
+  "jsVar-obj": {
+    "prefix": "js-var-obj",
+    "body": ["var $1 = {$2};"],
+    "description": "JAVASCRIPT.varObj"
+  },
 
-	"jsVar-obj": {
-		"prefix": "js-var-obj",
-		"body": [
-		  "var $1 = {$2};"
-		],
-		"description": "JAVASCRIPT.varObj"
-	},
-	
+  // DOM
+  "jsDocument-byID": {
+    "prefix": "js-documentGetElementById",
+    "body": ["document.getElementById($1)$2 = $3;"],
+    "description": "JAVASCRIPT.documentGetElementById"
+  },
 
-	// DOM
-	"jsDocument-byID": {
-		"prefix": "js-documentGetElementById",
-		"body": [
-		  "document.getElementById($1)$2 = $3;"
-		],
-		"description": "JAVASCRIPT.documentGetElementById"
-    },
-    
   "jsDocument": {
-      "prefix": "js-document",
-      "body": [
-        "document.$1;"
-      ],
-      "description": "JAVASCRIPT.document"
-	},
-	"jsDocument-id-value": {
-		"prefix": "js-document-id-value",
-		"body": [
-			"document.getElementById($1).value = $3;"
-		],
-		"description": "JAVASCRIPT.document-id-value"
-	  },
+    "prefix": "js-document",
+    "body": ["document.$1;"],
+    "description": "JAVASCRIPT.document"
+  },
+  "jsDocument-id-value": {
+    "prefix": "js-document-id-value",
+    "body": ["document.getElementById($1).value = $3;"],
+    "description": "JAVASCRIPT.document-id-value"
+  },
 
-	"jsDocument-id-disabled": {
-		"prefix": "js-document-id-disabled",
-		"body": [
-			"document.getElementById($1).disabled = $3;"
-		],
-		"description": "JAVASCRIPT.document-id-disabled"
-	},
+  "jsDocument-id-disabled": {
+    "prefix": "js-document-id-disabled",
+    "body": ["document.getElementById($1).disabled = $3;"],
+    "description": "JAVASCRIPT.document-id-disabled"
+  },
 
-	"jsDocument-id-innerHTML": {
-		"prefix": "js-document-id-innerHTML",
-		"body": [
-			"document.getElementById($1).innerHTML = $3;"
-		],
-		"description": "JAVASCRIPT.document-id-innerHTML"
-	},
+  "jsDocument-id-innerHTML": {
+    "prefix": "js-document-id-innerHTML",
+    "body": ["document.getElementById($1).innerHTML = $3;"],
+    "description": "JAVASCRIPT.document-id-innerHTML"
+  },
 
-	"jsDocument-id-type": {
-		"prefix": "js-document-id-type",
-		"body": [
-			"document.getElementById($1).type = $3;"
-		],
-		"description": "JAVASCRIPT.document-id-type"
-	},
-	"jsDocument-id-style": {
-		"prefix": "js-document-id-style",
-		"body": [
-			"document.getElementById($1).style = $3;"
-		],
-		"description": "JAVASCRIPT.document-id-style"
-	},
-	"jsDocument-id-checked": {
-		"prefix": "js-document-id-checked",
-		"body": [
-			"document.getElementById($1).checked = $3;"
-		],
-		"description": "JAVASCRIPT.document-id-checked"
-	},
+  "jsDocument-id-type": {
+    "prefix": "js-document-id-type",
+    "body": ["document.getElementById($1).type = $3;"],
+    "description": "JAVASCRIPT.document-id-type"
+  },
+  "jsDocument-id-style": {
+    "prefix": "js-document-id-style",
+    "body": ["document.getElementById($1).style = $3;"],
+    "description": "JAVASCRIPT.document-id-style"
+  },
+  "jsDocument-id-checked": {
+    "prefix": "js-document-id-checked",
+    "body": ["document.getElementById($1).checked = $3;"],
+    "description": "JAVASCRIPT.document-id-checked"
+  },
 
-	
-	// IF - ELSE - CONDITION
-    "jsIf": {
-        "prefix": "js-if",
-        "body": [
-          "if ($1) {",
-          "   $2",
-          "};"
-        ],
-        "description": "JAVASCRIPT.if"
-     },
-	 "jsIf-else": {
-        "prefix": "js-if-else",
-        "body": [
-			"if ($1) {",
-			"   $2",
-			"} else {",
-			"   $3",
-			"};"
-        ],
-        "description": "JAVASCRIPT.if-else"
-	 },
-	 "jsElse-if": {
-        "prefix": "js-else-if",
-        "body": [
-			"if ($1) {",
-			"   $2",
-			"} else if ($3) {",
-			"   $4",
-			"} else {",
-			"   $5",
-			"};"
-        ],
-        "description": "JAVASCRIPT.else-if"
-	 },
-	 
-	 "jsSwitch-case": {
-        "prefix": "js-switch-case",
-        "body": [
-			"switch ($1) {",
-			"    case $2:",
-			"        $3",
-			"        break;",
-			"    case $4:",
-			"        $5",
-			"        break;",
-			"    case $6:",
-			"        $7",
-			"        break;",
-			"    default:",
-			"        $8",
-			"};"
-        ],
-        "description": "JAVASCRIPT.switch-case"
-	 },
+  // IF - ELSE - CONDITION
+  "jsIf": {
+    "prefix": "js-if",
+    "body": ["if ($1) {", "   $2", "};"],
+    "description": "JAVASCRIPT.if"
+  },
+  "jsIf-else": {
+    "prefix": "js-if-else",
+    "body": ["if ($1) {", "   $2", "} else {", "   $3", "};"],
+    "description": "JAVASCRIPT.if-else"
+  },
+  "jsElse-if": {
+    "prefix": "js-else-if",
+    "body": [
+      "if ($1) {",
+      "   $2",
+      "} else if ($3) {",
+      "   $4",
+      "} else {",
+      "   $5",
+      "};"
+    ],
+    "description": "JAVASCRIPT.else-if"
+  },
 
-	 // STRING
-	 "jsStr-charAt": {
-        "prefix": "js-charat",
-        "body": [
-          "charAt($1)"
-        ],
-        "description": "JAVASCRIPT.Str-charAt"
-	 },
-	 "jsStr-charCodeAt": {
-        "prefix": "js-charCodeAt",
-        "body": [
-          "charCodeAt($1)"
-        ],
-        "description": "JAVASCRIPT.Str-charCodeAt"
-	 },
-	
-	 "jsStr-indexOf": {
-        "prefix": "js-indexOf",
-        "body": [
-          "indexOf($1)"
-        ],
-        "description": "JAVASCRIPT.Str-indexOf"
-	 },
-	 
-	 "jsStr-repeat": {
-        "prefix": "js-repeat",
-        "body": [
-          "repeat($1)"
-        ],
-        "description": "JAVASCRIPT.Str-repeat"
-	 },
-	 "jsStr-replace": {
-        "prefix": "js-replace",
-        "body": [
-          "replace($1)"
-        ],
-        "description": "JAVASCRIPT.Str-replace"
-	 },
-	 "jsStr-search": {
-        "prefix": "js-search",
-        "body": [
-          "search($1)"
-        ],
-        "description": "JAVASCRIPT.Str-search"
-	 },
-	 "jsStr-slice": {
-        "prefix": "js-slice",
-        "body": [
-          "slice($1, $2)"
-        ],
-        "description": "JAVASCRIPT.Str-slice"
-	 },
-	 "jsStr-split": {
-        "prefix": "js-split",
-        "body": [
-          "split($1)"
-        ],
-        "description": "JAVASCRIPT.Str-split"
-	 },
-	 "jsStr-substr": {
-        "prefix": "js-substr",
-        "body": [
-          "substr($1, $2)"
-        ],
-        "description": "JAVASCRIPT.Str-substr"
-	 },
-	 "jsStr-substring": {
-        "prefix": "js-substring",
-        "body": [
-          "substring($1, $2)"
-        ],
-        "description": "JAVASCRIPT.Str-substring"
-	 },
-	 "jsStr-toLocaleLowerCase": {
-        "prefix": "js-toLocaleLowerCase",
-        "body": [
-          "toLocaleLowerCase()"
-        ],
-        "description": "JAVASCRIPT.Str-toLocaleLowerCase"
-	 },
-	 "jsStr-toLocaleUpperCase": {
-        "prefix": "js-toLocaleUpperCase",
-        "body": [
-          "toLocaleUpperCase()"
-        ],
-        "description": "JAVASCRIPT.Str-toLocaleUpperCase"
-	 },
-	 "jsStr-toLowerCase": {
-        "prefix": "js-toLowerCase",
-        "body": [
-          "toLowerCase()"
-        ],
-        "description": "JAVASCRIPT.Str-toLowerCase"
-	 },
-	
-	 "jsStr-toUpperCase": {
-        "prefix": "js-toUpperCase",
-        "body": [
-          "toUpperCase()"
-        ],
-        "description": "JAVASCRIPT.Str-toUpperCase"
-	 },
-	 "jsStr-trim": {
-        "prefix": "js-trim",
-        "body": [
-          "trim()"
-        ],
-        "description": "JAVASCRIPT.Str-trim"
-	 },
+  "jsSwitch-case": {
+    "prefix": "js-switch-case",
+    "body": [
+      "switch ($1) {",
+      "    case $2:",
+      "        $3",
+      "        break;",
+      "    case $4:",
+      "        $5",
+      "        break;",
+      "    case $6:",
+      "        $7",
+      "        break;",
+      "    default:",
+      "        $8",
+      "};"
+    ],
+    "description": "JAVASCRIPT.switch-case"
+  },
 
-	 // NUMBER
-	 "jsNum-isFinite": {
-        "prefix": "js-isFinite",
-        "body": [
-          "isFinite(${1:value})"
-        ],
-        "description": "JAVASCRIPT.Num-isFinite"
-	 }, 
-	 "jsNum-isInteger": {
-        "prefix": "js-isInteger",
-        "body": [
-          "isInteger(${1:value})"
-        ],
-        "description": "JAVASCRIPT.Num-isInteger"
-	 }, 
-	 "jsNum-isNaN": {
-        "prefix": "js-isNaN",
-        "body": [
-          "isNaN(${1:value})"
-        ],
-        "description": "JAVASCRIPT.Num-isNaN"
-	 },
-	 "jsNum-isSafeInteger": {
-        "prefix": "js-isSafeInteger",
-        "body": [
-          "isSafeInteger(${1:value})"
-        ],
-        "description": "JAVASCRIPT.Num-isSafeInteger"
-	 },
-	 "jsNum-toFixed": {
-        "prefix": "js-toFixed",
-        "body": [
-          "toFixed(${1:value})"
-        ],
-        "description": "JAVASCRIPT.Num-toFixed"
-	 },
-	 "jsNum-toString": {
-        "prefix": "js-toString",
-        "body": [
-          "toString()"
-        ],
-        "description": "JAVASCRIPT.Num-toString"
-	 },
+  // STRING
+  "jsStr-charAt": {
+    "prefix": "js-charat",
+    "body": ["charAt($1)"],
+    "description": "JAVASCRIPT.Str-charAt"
+  },
+  "jsStr-charCodeAt": {
+    "prefix": "js-charCodeAt",
+    "body": ["charCodeAt($1)"],
+    "description": "JAVASCRIPT.Str-charCodeAt"
+  },
 
-	 // DATE
-	 "jsDate-getDate": {
-        "prefix": "js-getDate",
-        "body": [
-          "getDate()"
-        ],
-        "description": "JAVASCRIPT.Date-getDate"
-	 },
-	 "jsDate-getFullYear": {
-        "prefix": "js-getFullYear",
-        "body": [
-          "getFullYear()"
-        ],
-        "description": "JAVASCRIPT.Date-getFullYear"
-	 },
+  "jsStr-indexOf": {
+    "prefix": "js-indexOf",
+    "body": ["indexOf($1)"],
+    "description": "JAVASCRIPT.Str-indexOf"
+  },
 
-	 // ARRAY
-	 "jsArr-new": {
-        "prefix": "js-new-arr",
-        "body": [
-          "new Array()"
-        ],
-        "description": "JAVASCRIPT.Arr-fill"
-	 },
-	 "jsArr-toString": {
-        "prefix": "js-fill",
-        "body": [
-          "fill(${1:value}, ${2:start}, ${3:end})"
-        ],
-        "description": "JAVASCRIPT.Arr-fill"
-	 },
-	 
-	 "jsArr-indexOf": {
-        "prefix": "js-indexOf",
-        "body": [
-          "indexOf(${1:value})"
-        ],
-        "description": "JAVASCRIPT.Arr-indexOf"
-	 },
+  "jsStr-repeat": {
+    "prefix": "js-repeat",
+    "body": ["repeat($1)"],
+    "description": "JAVASCRIPT.Str-repeat"
+  },
+  "jsStr-replace": {
+    "prefix": "js-replace",
+    "body": ["replace($1)"],
+    "description": "JAVASCRIPT.Str-replace"
+  },
+  "jsStr-search": {
+    "prefix": "js-search",
+    "body": ["search($1)"],
+    "description": "JAVASCRIPT.Str-search"
+  },
+  "jsStr-slice": {
+    "prefix": "js-slice",
+    "body": ["slice($1, $2)"],
+    "description": "JAVASCRIPT.Str-slice"
+  },
+  "jsStr-split": {
+    "prefix": "js-split",
+    "body": ["split($1)"],
+    "description": "JAVASCRIPT.Str-split"
+  },
+  "jsStr-substr": {
+    "prefix": "js-substr",
+    "body": ["substr($1, $2)"],
+    "description": "JAVASCRIPT.Str-substr"
+  },
+  "jsStr-substring": {
+    "prefix": "js-substring",
+    "body": ["substring($1, $2)"],
+    "description": "JAVASCRIPT.Str-substring"
+  },
+  "jsStr-toLocaleLowerCase": {
+    "prefix": "js-toLocaleLowerCase",
+    "body": ["toLocaleLowerCase()"],
+    "description": "JAVASCRIPT.Str-toLocaleLowerCase"
+  },
+  "jsStr-toLocaleUpperCase": {
+    "prefix": "js-toLocaleUpperCase",
+    "body": ["toLocaleUpperCase()"],
+    "description": "JAVASCRIPT.Str-toLocaleUpperCase"
+  },
+  "jsStr-toLowerCase": {
+    "prefix": "js-toLowerCase",
+    "body": ["toLowerCase()"],
+    "description": "JAVASCRIPT.Str-toLowerCase"
+  },
 
-	 "jsArr-join": {
-        "prefix": "js-join",
-        "body": [
-          "join(${1:separator})"
-        ],
-        "description": "JAVASCRIPT.Arr-join"
-	 },
-	 "jsArr-push": {
-        "prefix": "js-push",
-        "body": [
-          "push(${1:item1}, ${2:item2}, ${3:item3})"
-        ],
-        "description": "JAVASCRIPT.Arr-push"
-	 },
-	 "jsArr-reverse": {
-        "prefix": "js-reverse",
-        "body": [
-          "reverse()"
-        ],
-        "description": "JAVASCRIPT.Arr-reverse"
-	 },
-	 "jsArr-slice": {
-        "prefix": "js-slice",
-        "body": [
-          "slice(${1:start}, ${2:end})"
-        ],
-        "description": "JAVASCRIPT.Arr-slice"
-	 },
-	 "jsArr-sort": {
-        "prefix": "js-sort",
-        "body": [
-          "sort()"
-        ],
-        "description": "JAVASCRIPT.Arr-sort"
-	 },
+  "jsStr-toUpperCase": {
+    "prefix": "js-toUpperCase",
+    "body": ["toUpperCase()"],
+    "description": "JAVASCRIPT.Str-toUpperCase"
+  },
+  "jsStr-trim": {
+    "prefix": "js-trim",
+    "body": ["trim()"],
+    "description": "JAVASCRIPT.Str-trim"
+  },
 
+  // NUMBER
+  "jsNum-isFinite": {
+    "prefix": "js-isFinite",
+    "body": ["isFinite(${1:value})"],
+    "description": "JAVASCRIPT.Num-isFinite"
+  },
+  "jsNum-isInteger": {
+    "prefix": "js-isInteger",
+    "body": ["isInteger(${1:value})"],
+    "description": "JAVASCRIPT.Num-isInteger"
+  },
+  "jsNum-isNaN": {
+    "prefix": "js-isNaN",
+    "body": ["isNaN(${1:value})"],
+    "description": "JAVASCRIPT.Num-isNaN"
+  },
+  "jsNum-isSafeInteger": {
+    "prefix": "js-isSafeInteger",
+    "body": ["isSafeInteger(${1:value})"],
+    "description": "JAVASCRIPT.Num-isSafeInteger"
+  },
+  "jsNum-toFixed": {
+    "prefix": "js-toFixed",
+    "body": ["toFixed(${1:value})"],
+    "description": "JAVASCRIPT.Num-toFixed"
+  },
+  "jsNum-toString": {
+    "prefix": "js-toString",
+    "body": ["toString()"],
+    "description": "JAVASCRIPT.Num-toString"
+  },
 
-	 // OBJECT
-	 "jsObj-new": {
-        "prefix": "js-new-obj",
-        "body": [
-          "new Object()"
-        ],
-        "description": "JAVASCRIPT.new-obj"
-	 },
+  // DATE
+  "jsDate-getDate": {
+    "prefix": "js-getDate",
+    "body": ["getDate()"],
+    "description": "JAVASCRIPT.Date-getDate"
+  },
+  "jsDate-getFullYear": {
+    "prefix": "js-getFullYear",
+    "body": ["getFullYear()"],
+    "description": "JAVASCRIPT.Date-getFullYear"
+  },
 
+  // ARRAY
+  "jsArr-new": {
+    "prefix": "js-new-arr",
+    "body": ["new Array()"],
+    "description": "JAVASCRIPT.Arr-fill"
+  },
+  "jsArr-toString": {
+    "prefix": "js-fill",
+    "body": ["fill(${1:value}, ${2:start}, ${3:end})"],
+    "description": "JAVASCRIPT.Arr-fill"
+  },
 
-	 //DATABASE
+  "jsArr-indexOf": {
+    "prefix": "js-indexOf",
+    "body": ["indexOf(${1:value})"],
+    "description": "JAVASCRIPT.Arr-indexOf"
+  },
 
-	 "db-CREATE-TABLE": {
-        "prefix": "db-create-table",
-        "body": [
-			"CREATE TABLE ${1:table_name} (",
-			"    ${2:col_name}    ${3:col_type}",
-			")"
-        ],
-        "description": "ORACLE.create-tables"
-	 },
+  "jsArr-join": {
+    "prefix": "js-join",
+    "body": ["join(${1:separator})"],
+    "description": "JAVASCRIPT.Arr-join"
+  },
+  "jsArr-push": {
+    "prefix": "js-push",
+    "body": ["push(${1:item1}, ${2:item2}, ${3:item3})"],
+    "description": "JAVASCRIPT.Arr-push"
+  },
+  "jsArr-reverse": {
+    "prefix": "js-reverse",
+    "body": ["reverse()"],
+    "description": "JAVASCRIPT.Arr-reverse"
+  },
+  "jsArr-slice": {
+    "prefix": "js-slice",
+    "body": ["slice(${1:start}, ${2:end})"],
+    "description": "JAVASCRIPT.Arr-slice"
+  },
+  "jsArr-sort": {
+    "prefix": "js-sort",
+    "body": ["sort()"],
+    "description": "JAVASCRIPT.Arr-sort"
+  },
 
-	 "db-SELECT": {
-        "prefix": "db-select-table",
-        "body": [
-			"SELECT",
-			"    ${1:col_name}",
-			"FROM",
-			"    ${2:table_name}",
-			"WHERE",
-			"    ${3:condition}",
-			"AND ${4:condition}",
-			"ORDER BY",
-			"    ${5:order_by}"
-        ],
-        "description": "ORACLE.select-tables"
-	 },
-	 "db-INSERT": {
-        "prefix": "db-insert-table",
-        "body": [
-			"INSERT INTO ${1:table_name} (",
-			"    ${2:col_name}",
-			"    ${3:col_name}",
-			"    ${4:col_name}",
-			") VALUES (",
-			"    ${5:value}",
-			"    ${6:value}",
-			"    ${7:value}",
-			")"
-        ],
-        "description": "ORACLE.insert-tables"
-	 },
-	 "db-UPDATE": {
-        "prefix": "db-update-table",
-        "body": [
-			"SELECT ${1:table_name}",
-			"SET",
-			"    ${2:col_name}    =    ${3:value}",
-			"    ${4:col_name}    =    ${5:value}",
-			"    ${6:col_name}    =    ${7:value}",
-			"WHERE",
-			"    ${8:condition}"
-        ],
-        "description": "ORACLE.update-tables"
-	 },
+  // OBJECT
+  "jsObj-new": {
+    "prefix": "js-new-obj",
+    "body": ["new Object()"],
+    "description": "JAVASCRIPT.new-obj"
+  },
 
-	 "db-DELETE": {
-        "prefix": "db-delete-table",
-        "body": [
-			"DELETE FROM ${1:table_name}",
-			"WHERE",
-			"    ${2:condition}",
-			"AND ${3:condition}"
-        ],
-        "description": "ORACLE.update-tables"
-	 },
+  //DATABASE
 
+  "db-CREATE-TABLE": {
+    "prefix": "db-create-table",
+    "body": [
+      "CREATE TABLE ${1:table_name} (",
+      "    ${2:col_name}    ${3:col_type}",
+      ")"
+    ],
+    "description": "ORACLE.create-tables"
+  },
 
+  "db-SELECT": {
+    "prefix": "db-select-table",
+    "body": [
+      "SELECT",
+      "    ${1:col_name}",
+      "FROM",
+      "    ${2:table_name}",
+      "WHERE",
+      "    ${3:condition}",
+      "AND ${4:condition}",
+      "ORDER BY",
+      "    ${5:order_by}"
+    ],
+    "description": "ORACLE.select-tables"
+  },
+  "db-INSERT": {
+    "prefix": "db-insert-table",
+    "body": [
+      "INSERT INTO ${1:table_name} (",
+      "    ${2:col_name}",
+      "    ${3:col_name}",
+      "    ${4:col_name}",
+      ") VALUES (",
+      "    ${5:value}",
+      "    ${6:value}",
+      "    ${7:value}",
+      ")"
+    ],
+    "description": "ORACLE.insert-tables"
+  },
+  "db-UPDATE": {
+    "prefix": "db-update-table",
+    "body": [
+      "SELECT ${1:table_name}",
+      "SET",
+      "    ${2:col_name}    =    ${3:value}",
+      "    ${4:col_name}    =    ${5:value}",
+      "    ${6:col_name}    =    ${7:value}",
+      "WHERE",
+      "    ${8:condition}"
+    ],
+    "description": "ORACLE.update-tables"
+  },
 
+  "db-DELETE": {
+    "prefix": "db-delete-table",
+    "body": [
+      "DELETE FROM ${1:table_name}",
+      "WHERE",
+      "    ${2:condition}",
+      "AND ${3:condition}"
+    ],
+    "description": "ORACLE.update-tables"
+  },
 
-	 "db-ASC": {
-        "prefix": "db-asc",
-        "body": [
-			"ASC"
-        ],
-        "description": "ORACLE.asc"
-	 },
-	 "db-DESC": {
-        "prefix": "db-desc",
-        "body": [
-			"DESC"
-        ],
-        "description": "ORACLE.desc"
-	 },
-	 "db-SYSDATE": {
-        "prefix": "db-sysdate",
-        "body": [
-			"SYSDATE"
-        ],
-        "description": "ORACLE.sysdate"
-	 },
-	 "db-UNION": {
-        "prefix": "db-union",
-        "body": [
-			"UNION"
-        ],
-        "description": "ORACLE.union"
-	 },
-	 "db-UNION ALL": {
-        "prefix": "db-union-all",
-        "body": [
-			"UNION ALL"
-        ],
-        "description": "ORACLE.union-all"
-	 },
-	 "db-INTERSECT": {
-        "prefix": "db-intersect",
-        "body": [
-			"INTERSECT"
-        ],
-        "description": "ORACLE.intersect"
-	 },
-	 "db-MINUS": {
-        "prefix": "db-minus",
-        "body": [
-			"MINUS"
-        ],
-        "description": "ORACLE.minus"
-	 },
+  "db-ASC": {
+    "prefix": "db-asc",
+    "body": ["ASC"],
+    "description": "ORACLE.asc"
+  },
+  "db-DESC": {
+    "prefix": "db-desc",
+    "body": ["DESC"],
+    "description": "ORACLE.desc"
+  },
+  "db-SYSDATE": {
+    "prefix": "db-sysdate",
+    "body": ["SYSDATE"],
+    "description": "ORACLE.sysdate"
+  },
+  "db-UNION": {
+    "prefix": "db-union",
+    "body": ["UNION"],
+    "description": "ORACLE.union"
+  },
+  "db-UNION ALL": {
+    "prefix": "db-union-all",
+    "body": ["UNION ALL"],
+    "description": "ORACLE.union-all"
+  },
+  "db-INTERSECT": {
+    "prefix": "db-intersect",
+    "body": ["INTERSECT"],
+    "description": "ORACLE.intersect"
+  },
+  "db-MINUS": {
+    "prefix": "db-minus",
+    "body": ["MINUS"],
+    "description": "ORACLE.minus"
+  },
 
-	 "db-BETWEEN-AND": {
-        "prefix": "db-between-and",
-        "body": [
-			"BETWEEN",
-			"    ${1:condition} ",
-			"AND ${2:condition} "
-        ],
-        "description": "ORACLE.select-tables"
-	 },
-	 "db-CASE-END": {
-        "prefix": "db-case-end",
-        "body": [
-			"CASE ${1:col_name} WHEN ${2:condition_1} THEN ${3:result_1}",
-			"                   WHEN ${4:condition_2} THEN ${5:result_2}",
-			"            ELSE ${6:result}",
-			"            END AS ${7:name}",
-        ],
-        "description": "ORACLE.case-end"
-	 },
-	 "db-AND": {
-        "prefix": "db-and",
-        "body": [
-			"AND ${1:condition} "
-        ],
-        "description": "ORACLE.and"
-	 },
-	 "db-OR": {
-        "prefix": "db-or",
-        "body": [
-			"OR ${1:condition} "
-        ],
-        "description": "ORACLE.or"
-	 },
-	 "db-NOT": {
-        "prefix": "db-not",
-        "body": [
-			"NOT ${1:condition} "
-        ],
-        "description": "ORACLE.not"
-	 },
-	 "db-NULL": {
-        "prefix": "db-null",
-        "body": [
-			"NULL ${1:condition} "
-        ],
-        "description": "ORACLE.null"
-	 },
-	 "db-LOWER": {
-        "prefix": "db-lower",
-        "body": [
-			"LOWER ${1:col_name} "
-        ],
-        "description": "ORACLE.lower"
-	 },
-	 "db-UPPER": {
-        "prefix": "db-upper",
-        "body": [
-			"UPPER ${1:col_name}"
-        ],
-        "description": "ORACLE.upper"
-	 },
-	 "db-AS": {
-        "prefix": "db-as",
-        "body": [
-			"AS ${1:name}"
-        ],
-        "description": "ORACLE.as"
-	 },
-	 
+  "db-BETWEEN-AND": {
+    "prefix": "db-between-and",
+    "body": ["BETWEEN", "    ${1:condition} ", "AND ${2:condition} "],
+    "description": "ORACLE.select-tables"
+  },
+  "db-CASE-END": {
+    "prefix": "db-case-end",
+    "body": [
+      "CASE ${1:col_name} WHEN ${2:condition_1} THEN ${3:result_1}",
+      "                   WHEN ${4:condition_2} THEN ${5:result_2}",
+      "            ELSE ${6:result}",
+      "            END AS ${7:name}"
+    ],
+    "description": "ORACLE.case-end"
+  },
+  "db-AND": {
+    "prefix": "db-and",
+    "body": ["AND ${1:condition} "],
+    "description": "ORACLE.and"
+  },
+  "db-OR": {
+    "prefix": "db-or",
+    "body": ["OR ${1:condition} "],
+    "description": "ORACLE.or"
+  },
+  "db-NOT": {
+    "prefix": "db-not",
+    "body": ["NOT ${1:condition} "],
+    "description": "ORACLE.not"
+  },
+  "db-NULL": {
+    "prefix": "db-null",
+    "body": ["NULL ${1:condition} "],
+    "description": "ORACLE.null"
+  },
+  "db-LOWER": {
+    "prefix": "db-lower",
+    "body": ["LOWER ${1:col_name} "],
+    "description": "ORACLE.lower"
+  },
+  "db-UPPER": {
+    "prefix": "db-upper",
+    "body": ["UPPER ${1:col_name}"],
+    "description": "ORACLE.upper"
+  },
+  "db-AS": {
+    "prefix": "db-as",
+    "body": ["AS ${1:name}"],
+    "description": "ORACLE.as"
+  },
 
-	 "db-AVG": {
-        "prefix": "db-avg",
-        "body": [
-			"AVG ${1:exp}"
-        ],
-        "description": "ORACLE.avg"
-	 },
-	 "db-COUNT": {
-        "prefix": "db-count",
-        "body": [
-			"COUNT ${1:exp}"
-        ],
-        "description": "ORACLE.count"
-	 },
-	 "db-MAX": {
-        "prefix": "db-max",
-        "body": [
-			"MAX ${1:exp}"
-        ],
-        "description": "ORACLE.max"
-	 },
-	 "db-MIN": {
-        "prefix": "db-min",
-        "body": [
-			"MIN ${1:exp}"
-        ],
-        "description": "ORACLE.min"
-	 },
-	 "db-HAVING": {
-        "prefix": "db-having",
-        "body": [
-			"HAVING ${1:exp}"
-        ],
-        "description": "ORACLE.having"
-	 },
+  "db-AVG": {
+    "prefix": "db-avg",
+    "body": ["AVG ${1:exp}"],
+    "description": "ORACLE.avg"
+  },
+  "db-COUNT": {
+    "prefix": "db-count",
+    "body": ["COUNT ${1:exp}"],
+    "description": "ORACLE.count"
+  },
+  "db-MAX": {
+    "prefix": "db-max",
+    "body": ["MAX ${1:exp}"],
+    "description": "ORACLE.max"
+  },
+  "db-MIN": {
+    "prefix": "db-min",
+    "body": ["MIN ${1:exp}"],
+    "description": "ORACLE.min"
+  },
+  "db-HAVING": {
+    "prefix": "db-having",
+    "body": ["HAVING ${1:exp}"],
+    "description": "ORACLE.having"
+  },
 
-
-	 "db-IN": {
-        "prefix": "db-in",
-        "body": [
-			"IN ($1, $2)"
-        ],
-        "description": "ORACLE.in"
-	 },
-	 "db-SUBSTR": {
-        "prefix": "db-substr",
-        "body": [
-			"SUBSTR ('${1:string}', ${2:start}, ${3:end})"
-        ],
-        "description": "ORACLE.substr"
-	 },
-	 "db-LENGTH": {
-        "prefix": "db-length",
-        "body": [
-			"LENGTH ('${1:string}')"
-        ],
-        "description": "ORACLE.length"
-	 },
-	 "db-TRIM": {
-        "prefix": "db-trim",
-        "body": [
-			"TRIM ('${1:string}')"
-        ],
-        "description": "ORACLE.trim"
-	 },
-	 "db-TO_NUMBER": {
-        "prefix": "db-to-number",
-        "body": [
-			"TO_NUMBER ('${1:string}')"
-        ],
-        "description": "ORACLE.to-number"
-	 },
-	 "db-TO_CHAR": {
-        "prefix": "db-to-char",
-        "body": [
-			"TO_CHAR ('${1:value}')"
-        ],
-        "description": "ORACLE.to-char"
-	 },
-	 "db-TO_DATE": {
-        "prefix": "db-to-date",
-        "body": [
-			"TO_DATE ('${1:string}')"
-        ],
-        "description": "ORACLE.to-date"
-	 },
-	 "db-REPLACE": {
-        "prefix": "db-replace",
-        "body": [
-			"REPLACE ('${1:string}', ${2:string_to_replace}, ${3:replacement_string})"
-        ],
-        "description": "ORACLE.substr"
-	 },
-	 "db-NVL": {
-        "prefix": "db-nvl",
-        "body": [
-			"NVL (${1:value1}, ${2:value1})"
-        ],
-        "description": "ORACLE.nvl"
-	 },
-	 "db-COALESCE": {
-        "prefix": "db-coalesce",
-        "body": [
-			"COALESCE  (${1:exp_1}, ${2:exp_2})"
-        ],
-        "description": "ORACLE.coalesce"
-	 },
-	 "db-LIKE": {
-        "prefix": "db-like",
-        "body": [
-			"LIKE '$1"
-        ],
-        "description": "ORACLE.like"
-	 }
-
+  "db-IN": {
+    "prefix": "db-in",
+    "body": ["IN ($1, $2)"],
+    "description": "ORACLE.in"
+  },
+  "db-SUBSTR": {
+    "prefix": "db-substr",
+    "body": ["SUBSTR ('${1:string}', ${2:start}, ${3:end})"],
+    "description": "ORACLE.substr"
+  },
+  "db-LENGTH": {
+    "prefix": "db-length",
+    "body": ["LENGTH ('${1:string}')"],
+    "description": "ORACLE.length"
+  },
+  "db-TRIM": {
+    "prefix": "db-trim",
+    "body": ["TRIM ('${1:string}')"],
+    "description": "ORACLE.trim"
+  },
+  "db-TO_NUMBER": {
+    "prefix": "db-to-number",
+    "body": ["TO_NUMBER ('${1:string}')"],
+    "description": "ORACLE.to-number"
+  },
+  "db-TO_CHAR": {
+    "prefix": "db-to-char",
+    "body": ["TO_CHAR ('${1:value}')"],
+    "description": "ORACLE.to-char"
+  },
+  "db-TO_DATE": {
+    "prefix": "db-to-date",
+    "body": ["TO_DATE ('${1:string}')"],
+    "description": "ORACLE.to-date"
+  },
+  "db-REPLACE": {
+    "prefix": "db-replace",
+    "body": [
+      "REPLACE ('${1:string}', ${2:string_to_replace}, ${3:replacement_string})"
+    ],
+    "description": "ORACLE.substr"
+  },
+  "db-NVL": {
+    "prefix": "db-nvl",
+    "body": ["NVL (${1:value1}, ${2:value1})"],
+    "description": "ORACLE.nvl"
+  },
+  "db-COALESCE": {
+    "prefix": "db-coalesce",
+    "body": ["COALESCE  (${1:exp_1}, ${2:exp_2})"],
+    "description": "ORACLE.coalesce"
+  },
+  "db-LIKE": {
+    "prefix": "db-like",
+    "body": ["LIKE '$1"],
+    "description": "ORACLE.like"
   }
-  
+}
