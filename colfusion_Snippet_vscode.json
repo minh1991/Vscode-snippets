@@ -33,13 +33,11 @@
     ],
     "description": "HTML"
   },
-
   "htmlScript": {
     "prefix": "ht-script",
     "body": ["<SCRIPT>$1</SCRIPT>"],
     "description": "HTML.script"
   },
-
   "html-H1": {
     "prefix": "ht-H1",
     "body": ["<H1>$1</H1>"],
@@ -133,7 +131,6 @@
     "body": ["<DIV>$1</DIV>"],
     "description": "HTML.div"
   },
-
   "htmlUl": {
     "prefix": "ht-ul",
     "body": [
@@ -145,13 +142,11 @@
     ],
     "description": "HTML.Ul"
   },
-
   "htmlLi": {
     "prefix": "ht-li",
     "body": ["<LI>$1</LI>"],
     "description": "HTML.Li"
   },
-
   "htmlTable-All": {
     "prefix": "ht-tbl-all",
     "body": [
@@ -162,7 +157,6 @@
       "       <TH>$3</TH>",
       "       <TH>$4</TH>",
       "   </TR>",
-
       "   <TR>",
       "       <TD>$5</TD>",
       "       <TD>$6</TD>",
@@ -173,7 +167,6 @@
     ],
     "description": "HTML.Table"
   },
-
   "htmlColspan": {
     "prefix": "ht-colspan",
     "body": ["colspan=${1:colspan}"],
@@ -184,7 +177,6 @@
     "body": ["rowspan=${1:rowspan}"],
     "description": "HTML.rowspan"
   },
-
   "htmlColgroup": {
     "prefix": "ht-colgroup",
     "body": [
@@ -196,7 +188,6 @@
     ],
     "description": "HTML.colgroup"
   },
-
   "htmlTr": {
     "prefix": "ht-tr",
     "body": ["<TR>$1</TR>"],
@@ -217,7 +208,6 @@
     "body": ["<TABLE>$1</TABLE>"],
     "description": "HTML.tbl"
   },
-
   "htmlThead": {
     "prefix": "ht-thead",
     "body": ["<THEAD>$1</THEAD>"],
@@ -233,7 +223,6 @@
     "body": ["<TFOOT>$1</TFOOT>"],
     "description": "HTML.tfoot"
   },
-
   "htmlSpan": {
     "prefix": "ht-span",
     "body": ["<SPAN>$1</SPAN>"],
@@ -248,7 +237,6 @@
     ],
     "description": "HTML.form"
   },
-
   "htmlInput": {
     "prefix": "ht-input",
     "body": [
@@ -272,30 +260,24 @@
     "body": ["<OPTION value=${1:value}>$2</OPTION>"],
     "description": "HTML.option"
   },
-
   // COLDFUSION
-
   "cfmComment": {
     "prefix": "cf-comment",
     "body": ["<!---  $1  --->"],
     "description": "COLDFUSION.comment"
   },
-
   // JAVASCRIPT
-
   // COMMON
   "jsConsoleLog": {
     "prefix": "js-clg",
     "body": ["console.log('$1');"],
     "description": "JAVASCRIPT.consoleLog"
   },
-
   "jsAlert": {
     "prefix": "js-alert",
     "body": ["alert('$1');"],
     "description": "JAVASCRIPT.alert"
   },
-
   "jsFunction": {
     "prefix": "js-function",
     "body": ["function $1 ($2) {", "     $3", "   return $4;", "};"],
@@ -316,7 +298,6 @@
     "body": ["toString()"],
     "description": "JAVASCRIPT.toString"
   },
-
   "js-loopFor": {
     "prefix": "js-for",
     "body": [
@@ -361,7 +342,6 @@
     "body": ["showModalDialog($1)"],
     "description": "JAVASCRIPT.ShowModalDialog"
   },
-
   "js-WindowOpen": {
     "prefix": "js-WindowOpen",
     "body": ["window.open($1);"],
@@ -382,7 +362,6 @@
     "body": ["window.event;"],
     "description": "JAVASCRIPT.WindowEvent"
   },
-
   // ACTION EVENTS
   "jsOnclick": {
     "prefix": "js-onclick",
@@ -424,33 +403,28 @@
     "body": ["action=$1"],
     "description": "JAVASCRIPT.action"
   },
-
   //VARIABLE
   "jsVar": {
     "prefix": "js-var",
     "body": ["var $1 = $2;"],
     "description": "JAVASCRIPT.var"
   },
-
   "jsVar-arr": {
     "prefix": "js-var-arr",
     "body": ["var $1 = [$2];"],
     "description": "JAVASCRIPT.varArr"
   },
-
   "jsVar-obj": {
     "prefix": "js-var-obj",
     "body": ["var $1 = {$2};"],
     "description": "JAVASCRIPT.varObj"
   },
-
   // DOM
   "jsDocument-byID": {
     "prefix": "js-documentGetElementById",
     "body": ["document.getElementById($1)$2 = $3;"],
     "description": "JAVASCRIPT.documentGetElementById"
   },
-
   "jsDocument": {
     "prefix": "js-document",
     "body": ["document.$1;"],
@@ -461,19 +435,16 @@
     "body": ["document.getElementById($1).value = $3;"],
     "description": "JAVASCRIPT.document-id-value"
   },
-
   "jsDocument-id-disabled": {
     "prefix": "js-document-id-disabled",
     "body": ["document.getElementById($1).disabled = $3;"],
     "description": "JAVASCRIPT.document-id-disabled"
   },
-
   "jsDocument-id-innerHTML": {
     "prefix": "js-document-id-innerHTML",
     "body": ["document.getElementById($1).innerHTML = $3;"],
     "description": "JAVASCRIPT.document-id-innerHTML"
   },
-
   "jsDocument-id-type": {
     "prefix": "js-document-id-type",
     "body": ["document.getElementById($1).type = $3;"],
@@ -489,7 +460,6 @@
     "body": ["document.getElementById($1).checked = $3;"],
     "description": "JAVASCRIPT.document-id-checked"
   },
-
   // IF - ELSE - CONDITION
   "jsIf": {
     "prefix": "js-if",
@@ -514,7 +484,6 @@
     ],
     "description": "JAVASCRIPT.else-if"
   },
-
   "jsSwitch-case": {
     "prefix": "js-switch-case",
     "body": [
@@ -534,7 +503,6 @@
     ],
     "description": "JAVASCRIPT.switch-case"
   },
-
   // STRING
   "jsStr-charAt": {
     "prefix": "js-charat",
@@ -546,13 +514,11 @@
     "body": ["charCodeAt($1)"],
     "description": "JAVASCRIPT.Str-charCodeAt"
   },
-
   "jsStr-indexOf": {
     "prefix": "js-indexOf",
     "body": ["indexOf($1)"],
     "description": "JAVASCRIPT.Str-indexOf"
   },
-
   "jsStr-repeat": {
     "prefix": "js-repeat",
     "body": ["repeat($1)"],
@@ -603,7 +569,6 @@
     "body": ["toLowerCase()"],
     "description": "JAVASCRIPT.Str-toLowerCase"
   },
-
   "jsStr-toUpperCase": {
     "prefix": "js-toUpperCase",
     "body": ["toUpperCase()"],
@@ -614,7 +579,6 @@
     "body": ["trim()"],
     "description": "JAVASCRIPT.Str-trim"
   },
-
   // NUMBER
   "jsNum-isFinite": {
     "prefix": "js-isFinite",
@@ -646,7 +610,6 @@
     "body": ["toString()"],
     "description": "JAVASCRIPT.Num-toString"
   },
-
   // DATE
   "jsDate-getDate": {
     "prefix": "js-getDate",
@@ -658,7 +621,6 @@
     "body": ["getFullYear()"],
     "description": "JAVASCRIPT.Date-getFullYear"
   },
-
   // ARRAY
   "jsArr-new": {
     "prefix": "js-new-arr",
@@ -670,13 +632,11 @@
     "body": ["fill(${1:value}, ${2:start}, ${3:end})"],
     "description": "JAVASCRIPT.Arr-fill"
   },
-
   "jsArr-indexOf": {
     "prefix": "js-indexOf",
     "body": ["indexOf(${1:value})"],
     "description": "JAVASCRIPT.Arr-indexOf"
   },
-
   "jsArr-join": {
     "prefix": "js-join",
     "body": ["join(${1:separator})"],
@@ -702,15 +662,28 @@
     "body": ["sort()"],
     "description": "JAVASCRIPT.Arr-sort"
   },
-
   // OBJECT
   "jsObj-new": {
     "prefix": "js-new-obj",
     "body": ["new Object()"],
     "description": "JAVASCRIPT.new-obj"
   },
-
   //DATABASE
+  // "db-transaction-query": {
+  // 	"prefix": "db-transaction-query",
+  // 	"body": [
+  // 		"<CFTRANSACTION>",
+  // 		"    <CFTRY>",
+
+  // 		"    <CFTRANSACTION action=${1:commit}>",
+  // 		"    <CFCATCH type=${1:commit}>",
+
+  // 		"    </CFCATCH>>",
+  // 		"    </CFTRY>",
+  // 		"</CFTRANSACTION>"
+  // 	],
+  // 	"description": "ORACLE.transaction-query"
+  // },
 
   "db-CREATE-TABLE": {
     "prefix": "db-create-table",
@@ -721,7 +694,6 @@
     ],
     "description": "ORACLE.create-tables"
   },
-
   "db-SELECT": {
     "prefix": "db-select-table",
     "body": [
@@ -765,7 +737,6 @@
     ],
     "description": "ORACLE.update-tables"
   },
-
   "db-DELETE": {
     "prefix": "db-delete-table",
     "body": [
@@ -776,7 +747,6 @@
     ],
     "description": "ORACLE.update-tables"
   },
-
   "db-ASC": {
     "prefix": "db-asc",
     "body": ["ASC"],
@@ -812,7 +782,6 @@
     "body": ["MINUS"],
     "description": "ORACLE.minus"
   },
-
   "db-BETWEEN-AND": {
     "prefix": "db-between-and",
     "body": ["BETWEEN", "    ${1:condition} ", "AND ${2:condition} "],
@@ -863,7 +832,6 @@
     "body": ["AS ${1:name}"],
     "description": "ORACLE.as"
   },
-
   "db-AVG": {
     "prefix": "db-avg",
     "body": ["AVG ${1:exp}"],
@@ -889,7 +857,6 @@
     "body": ["HAVING ${1:exp}"],
     "description": "ORACLE.having"
   },
-
   "db-IN": {
     "prefix": "db-in",
     "body": ["IN ($1, $2)"],
